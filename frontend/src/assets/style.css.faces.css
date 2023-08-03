@@ -1,0 +1,137 @@
+body, body.sge-public {
+    font-family: 'Poppins', "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+    font-size: 0.8rem !important;
+    color: #333;
+}
+
+.sge-public .ui-widget, .sge-public .ui-widget .ui-widget {
+    font-family: 'Poppins', "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+}
+
+header {
+    height: 40px;
+    background-color: #d0d5e0;
+    line-height: 40px;
+    font-size: 13px;
+}
+
+header a {
+    color: #656464;
+}
+
+.sge-notif {
+    line-height: initial;
+}
+
+.home-logo {
+    padding: 10px;
+}
+
+.sge-public.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #d6e5ee !important;
+}
+
+.sge-public.navbar, .sge-public.navbar .container, .home-logo, .sge-main-menu {
+    height: 70px;
+}
+
+.main-container {
+    min-height: 500px;
+}
+
+/*.navbar-light .navbar-nav .nav-link {
+    color: rgba(0, 0, 0, 0.83) !important;
+}*/
+
+a.nav-link {
+    font-size: 16px;
+}
+
+/*.sge-portal .dropdown-menu {
+    margin-top: 0;
+}*/
+
+.sge-main-menu > li a:not(.dropdown-item) {
+    line-height: 3.2em;
+}
+
+.sge-main-menu li.nav-item {
+    margin-top: 0;
+}
+
+header .sge-user-photo {
+    width: 33px !important;
+    margin-left: 10px;
+}
+
+.sge-user-photo {
+    border-radius: 50%;
+}
+
+.sge-public input:not(.sge-range-from):not(.sge-range-to):not(.ui-autocomplete-input):not(#mainMenuForm\:menu-search-text):not(.ui-selectonemenu-filter):not([type=radio]):not([type=checkbox]):not(.cke_dialog_ui_checkbox_input):not(.sge-input-grille):not(.knob) {
+    width: 100% !important;
+}
+
+.sge-width-10p {
+    width: 10%;
+}
+
+/*.sge-public .actionFieldset legend,
+.sge-public .bootstrap-dialog .bootstrap-dialog-message,
+.sge-public .ui-widget,
+.sge-public .ui-widget .ui-widget {
+    font-size: initial !important;
+}*/
+
+.sge-public .ui-outputpanel.ui-widget.sge-question-required {
+    font-size: 16px !important;
+}
+
+.user-menu .ui-widget.dropdown-item ,.school-menu .ui-widget.dropdown-item {
+    font-size: 1rem;
+}
+
+/*.sge-questionnaire-page .ui-messages-error {
+    position: initial;
+    max-width: none;
+    background-color: #b50000 !important;
+}*/
+
+@media (max-width: 980px) {
+    
+    .sge-main-menu.navbar {
+        padding: 0;
+    }
+    
+    .navbar-brand {
+        padding: 0;
+        padding-left: 5px;
+    }
+    
+    .navbar-toggler {
+        margin-right: 5px; 
+    }
+    
+    .navbar-collapse {
+        z-index: 1;
+    }
+
+    #navbarResponsive .sge-main-menu {
+        height: auto;
+    }
+
+    #navbarResponsive .sge-main-menu > li a:not(.dropdown-item) {
+        line-height: 1.5em;
+        padding: 8px;
+    }
+    
+    #navbarResponsive {
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        left: 0px;
+        z-index: 2;
+    }
+}

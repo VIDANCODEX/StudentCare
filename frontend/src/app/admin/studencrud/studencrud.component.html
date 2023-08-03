@@ -1,0 +1,144 @@
+<app-header></app-header>
+<div class="main-container container" style="margin-top: 50px;">
+  <div class="page-title">
+    <h1 class="tracking-in-expand">Student Care</h1>
+  </div>
+  <form id="form" name="form" method="post" action="https://myu.universitecentrale.net/sge/portal/myProfile.faces" enctype="multipart/form-data">
+    <input type="hidden" name="form" value="form">
+
+    <div id="messagesRegion" aria-label="form feedback" aria-live="assertive" aria-relevant="additions">
+      <div id="form:messages">
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="sge-user-profile-info col-lg-3 col-md-12 text-center">
+
+
+          <h1 class="my-profile-section-h" style="width: 995px;">Carte Séjour</h1>
+
+
+          <div id="form:filter" class="ui-outputpanel ui-widget emp-filter mt-4" style="
+    width: 999px;
+">
+            <div class="legend sge-theme-color"><i class="fas fa-filter mr-1"></i>Filtre</div>
+            <form [formGroup]="filterForm" (ngSubmit)="applyFilters()">
+            <table style="table-layout: fixed;">
+            <tbody>
+            <tr>
+              <td class="clmn-3">
+
+                <div id="form:periodGrid" class="ui-outputpanel ui-widget aria-role-presentation form-group" role="presentation">
+                  <div id="form:j_idt148" class="ui-outputpanel ui-widget form-control-placeholder" style="">
+                <label class=" ">Code</label>
+                  </div>
+
+                  <input type="number" formControlName="code" placeholder="Code">
+
+                  </div>
+              </td>
+
+              <td class="clmn-3">
+
+                <div id="form:periodGrid" class="ui-outputpanel ui-widget aria-role-presentation form-group" role="presentation">
+                  <div id="form:j_idt148" class="ui-outputpanel ui-widget form-control-placeholder" style="">
+                    <label class=" ">Nationalite</label>
+                  </div>
+
+                  <input type="text" formControlName="nationalite" placeholder="Nationalité">
+
+                </div>
+              </td>
+              <td class="clmn-3">
+
+                <div id="form:periodGrid" class="ui-outputpanel ui-widget aria-role-presentation form-group" role="presentation">
+                  <div id="form:j_idt148" class="ui-outputpanel ui-widget form-control-placeholder" style="">
+                    <label class=" ">Statut</label>
+                  </div>
+
+                  <select formControlName="statut">
+                    <option value="">Tous les statuts</option>
+                    <option value="Validé">Validé</option>
+                    <option value="En Cours">En Cours</option>
+                    <option value="Incomplet">Incomplet</option>
+                    <option value="Attente">Attente</option>
+                  </select>
+
+                </div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+              <button type="submit">Appliquer les filtres</button>
+            </form>
+          </div><div id="form:j_idt157" class="ui-datatable ui-widget"><div class="ui-datatable-tablewrapper">
+
+
+
+
+
+          <table role="grid" style="table-layout: auto;width: 1000px;"><thead id="form:j_idt157_head"><tr role="row"><th id="form:j_idt157:j_idt158" class="ui-state-default" role="columnheader" aria-label="Année" scope="col"><span class="ui-column-title">Code </span></th>
+          <th id="form:j_idt157:j_idt160" class="ui-state-default" role="columnheader" aria-label="Niveau/Spécialité" scope="col"><span class="ui-column-title">Nationalité</span></th><th id="form:j_idt157:j_idt162" class="ui-state-default" role="columnheader" aria-label="Classe" scope="col"><span class="ui-column-title">Nom</span></th>
+          <th id="form:j_idt157:j_idt162" class="ui-state-default" role="columnheader" aria-label="Classe" scope="col"><span class="ui-column-title">Prenom</span></th>
+          <th id="form:j_idt157:j_idt162" class="ui-state-default" role="columnheader" aria-label="Classe" scope="col"><span class="ui-column-title">Arrivée</span></th>
+
+          <th id="form:j_idt157:j_idt162" class="ui-state-default" role="columnheader" aria-label="Classe" scope="col"><span class="ui-column-title">Délai</span></th>
+
+          <th id="form:j_idt157:j_idt162" class="ui-state-default" role="columnheader" aria-label="Classe" scope="col"><span class="ui-column-title">Statut</span></th></tr></thead><tbody id="form:j_idt157_data" class="ui-datatable-data ui-widget-content">
+
+          <ng-container *ngFor="let StudentItem of StudentArray; let i = index">
+        <tr  *ngIf="i < 20" data-ri="0" class="ui-widget-content ui-datatable-even" role="row">
+          <td role="gridcell">
+            <a [routerLink]="['/admin/profil', StudentItem.id]">
+              {{ StudentItem.id }}
+            </a>
+          </td>
+
+          <td role="gridcell">{{StudentItem.Nationalite }}</td>
+          <td role="gridcell">{{StudentItem.Nom }}</td>
+          <td role="gridcell">{{StudentItem.Prenom }}</td>
+          <td role="gridcell">{{StudentItem.Arrivee | date: 'dd/MM/yyyy'}}</td>
+          <td role="gridcell">{{StudentItem.Delai | date: 'dd/MM/yyyy' }}</td>
+          <td class="gridcell"><span *ngIf="StudentItem.Statut ==='Validé'" [ngClass]="'ml-2 badge badge-success'">
+            {{StudentItem.Statut }}</span>
+            <span *ngIf="StudentItem.Statut ==='En Cours'" [ngClass]="'ml-2 badge badge-warning'">
+            {{StudentItem.Statut }}</span>
+            <span *ngIf="StudentItem.Statut ==='Incomplet'" [ngClass]="'ml-2 badge badge-danger'">
+            {{StudentItem.Statut }}</span>
+            <span *ngIf="StudentItem.Statut ==='Attente'" [ngClass]="'ml-2 badge badge-secondary'">
+            {{StudentItem.Statut }}</span>
+          </td>
+        </tr>
+          </ng-container>
+        </tbody></table>
+
+
+        </div></div>
+
+
+          <div id="form:courseContentsGrid_paginator_bottom" class="ui-paginator ui-paginator-bottom ui-widget-header ui-corner-bottom" role="navigation" aria-label="Pagination" style="
+    width: 1001px;
+">
+            <span class="ui-paginator-current">Page {{ currentPage }} sur {{ totalPages }}</span>
+            <button  class="ui-paginator-prev ui-state-default ui-corner-all " [ngClass]="{'ui-state-disabled' :currentPage === 1} " aria-label="Page précédante" type="button" (click)="previousPage()">
+              <span class="ui-icon ui-icon-seek-prev">P</span>
+            </button>
+
+            <button class="ui-paginator-next ui-state-default ui-corner-all" [ngClass]="{'ui-state-disabled' :currentPage === totalPages}" aria-label="Page suivante" type="button" (click)="nextPage()">
+              <span class="ui-icon ui-icon-seek-next">N</span>
+            </button>
+
+          </div>
+          <div class="ui-toolbar-group-right" style="
+    width: 450px;
+    height: 40px;
+">
+            <a id="form:j_idt140:xls" href="#" class="ui-commandlink ui-widget btn btn-sm btn-light" aria-label="Export EXCEL" title="Export EXCEL">
+              <img id="form:j_idt140:j_idt145" src="" alt=""></a>
+          </div>
+        </div>
+        <div class="ui-toolbar-group-right"><img id="form:j_idt140:j_idt144" width="20" alt="" src=""></div>
+        <div class="w-100"></div>
+      </div>
+
+

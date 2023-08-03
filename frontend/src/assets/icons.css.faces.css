@@ -1,0 +1,1066 @@
+.iconView:hover, .iconEdit:hover, .iconAdd:hover, .iconDelete:hover, .iconSelect:hover, 
+.iconExecute:hover, .iconMagic:hover, .iconHistory:hover, .iconExamCourse:hover, .iconPresent:hover,
+.iconAttendance-action:hover, .iconAttendance:hover,
+.iconRemove:hover, .iconBan:hover,
+.iconAttendance-disabled:hover,
+.iconHourglass:hover,
+.iconHourglass-end-disabled:hover,
+.iconHourglass-start-disabled:hover,
+.iconHourglassStart:hover, .iconDuplicateTTs:hover, .iconGenerateTTLites:hover ,iconPublish:hover , iconUnpublish:hover , .iconResetSchoolYearStatus:hover, .iconVirtualClass:hover, .iconSendValidationRequest:hover, 
+.iconRefresh:hover{
+    opacity: 0.8;
+}
+.actions-column .iconView:after{ 
+    content: "\f002" ;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    background-image: none !important;
+    background: #07be61;
+    padding: 5px 6px !important;
+    margin: 0 ;
+    color: #fff;
+    border-radius: 3px;
+}
+.actions-column .iconEdit:after, .actions-footer-card .iconEdit:after{ 
+    content: "\f303" ;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    background-image: none !important;
+    background: #337ab7 ;
+    padding: 5px 6px ;
+    margin: 0 ;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.iconDelete:after { 
+    content: "\f00d";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    background-image: none;
+    background: #ee465a;
+    padding: 5px 6px;
+    margin: 0;
+    color: #fff;
+    border-radius: 3px;
+}
+.iconSelect:after { 
+    content: "\f00c";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    background-image: none;
+    background: #33b73e;
+    padding: 5px 6px;
+    margin: 0;
+    color: #fff;
+    border-radius: 3px;
+}
+.iconPresent:after { 
+    content: "\f5b1";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    background-image: none;
+    background: #33b73e;
+    padding: 5px 6px;
+    margin: 0;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.iconExecute:after { 
+    content: "\f144";
+    font-family: 'Font Awesome 5 Free';
+    /*font-weight: 900;*/
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    background-image: none;
+    background: #337ab7;
+    padding: 5px 3px;
+    margin: 0;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.iconBan:after { 
+    content: "\f05e";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    background-image: none;
+    background: #ee465a;
+    padding: 5px 6px;
+    margin: 0;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.iconUndoAnswer:after { 
+    content: "\f146";
+    font-family: 'Font Awesome 5 Free';
+    /*font-weight: 900;*/
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    background-image: none;
+    background: #337ab7;
+    padding: 5px 7px;
+    margin: 0;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.iconResendCode:after { 
+    content: "\f0e0";
+    font-family: 'Font Awesome 5 Free';
+    /*font-weight: 900;*/
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    background-image: none;
+    background: #337ab7;
+    padding: 5px 6px;
+    margin: 0;
+    color: #fff;
+    border-radius: 3px;
+}
+
+
+.iconExamCourse:after { 
+    content: "\f15c";
+    font-family: 'Font Awesome 5 Free';
+    /*font-weight: 900;*/
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    background-image: none;
+    background: #337ab7;
+    padding: 5px 6px;
+    margin: 0;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.iconMagic:after { 
+    content: "\f0d0";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    background-image: none;
+    background: #337ab7;
+    padding: 5px 6px;
+    margin: 0;
+    color: #fff;
+    border-radius: 3px;
+}
+.iconHistory:after { 
+    content: "\f1da";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    background-image: none;
+    background: #337ab7;
+    padding: 5px 6px;
+    margin: 0;
+    color: #fff;
+    border-radius: 3px;
+}
+.iconRefresh:after { 
+    content: "\f021";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    background-image: none;
+    background: #337ab7;
+    padding: 5px 6px;
+    margin: 0;
+    color: #fff;
+    border-radius: 3px;
+}
+.iconAttendance-action:after { 
+    content: "\f0a1";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    background-image: none;
+    background: #337ab7;
+    padding: 5px 6px;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 13px;
+    margin-right: 1px;
+}
+.iconAttendance:after { 
+    content: "\f0a1";
+    color: #337ab7;
+}
+.iconAttendance-disabled:after { 
+    content: "\f0a1";
+    color: #bebdd4;
+}
+
+.iconHourglass:after {
+    content:  "\f1f6";
+    color: #dc2323;
+}
+
+.iconHourglass-end-disabled:after { 
+    content:  "\f1f6";
+    color: #bebdd4;
+}
+.iconHourglass-start-disabled:after { 
+    content:  "\f0f3";
+    color:  #bebdd4 ;
+}
+.iconHourglassStart:after { 
+    content:  "\f0f3";
+    color: #55be08;
+}
+.iconSearch { 
+    background-image: url("") !important;
+}
+
+.iconView { 
+    background-image: url("") !important;
+    /*margin-left: 5px !important;*/
+}
+.iconAdd { 
+    background-image: url("") !important;
+}
+
+.sge-select-icons .iconAdd, .sge-select-icons .iconView, .sge-select-icons .iconEdit {
+    background-size: 16px;
+    margin-right: auto !important;
+}
+
+.sge-select-icons .iconAdd {
+    background-image: url("") !important;
+}
+
+.sge-select-icons .iconView {
+    background-image: url("") !important;
+}
+
+.sge-select-icons .iconEdit {
+    background-image: url("") !important;
+}
+
+.iconUpload { 
+    background-image: url("") !important;
+}
+
+.iconExcel { 
+    background-image: url("") !important;
+}
+
+.iconUsers{
+    background-image: url("") !important;
+}
+.iconStudent{
+    background-image: url("") !important;
+}
+
+.iconRoles{
+    background-image: url("") !important;
+}
+
+.iconCountry{
+    background-image: url("") !important;
+}
+
+.iconProfessor{
+    background-image: url("") !important;
+}
+
+.icondepartment{
+    background-image: url("") !important;
+}
+
+.iconSeance{
+    background-image: url("") !important;
+}
+
+.iconGroupment{
+    background-image: url("") !important;
+}
+
+.iconDiploma{
+    background-image: url("") !important;
+}
+
+.iconQuiz{
+    background-image: url("") !important;
+}
+
+.iconModule{
+    background-image: url("") !important;
+}
+
+.iconUnitCourse{
+    background-image: url("") !important;
+}
+.iconMyCourses{
+    background-image: url("") !important;
+}
+.iconSyllabus{
+    background-image: url("") !important;
+}
+
+.iconCourse{
+    background-image: url("") !important;
+}
+
+.iconSection{
+    background-image: url("") !important;
+}
+
+.iconSpeciality{
+    background-image: url("") !important;
+}
+.iconSchoolY{
+    background-image: url("") !important;
+}
+
+.iconPeriod{
+    background-image: url("") !important;
+}
+
+.iconSchool{
+    background-image: url("") !important;
+}
+.iconClassroom{
+    background-image: url("") !important;
+}
+
+.iconClass{
+    background-image: url("") !important;
+}
+
+.iconWeekDay{
+    background-image: url("") !important;
+}
+
+.iconclassroomType{
+    background-image: url("") !important;
+}
+
+.iconCourseType{
+    background-image: url("") !important;
+}
+
+.iconExamType{
+    background-image: url("") !important;
+}
+
+.iconProfServiceType{
+    background-image: url("") !important;
+}
+
+.iconStudyType{
+    background-image: url("") !important;
+}
+.iconMotifNoteVide {
+    background-image: url("") !important;
+}
+.iconTimeTable{
+    background-image: url("") !important;
+}
+
+.iconTimeTableProf{
+    background-image: url("") !important;
+}
+
+.iconTimeTableRoom{
+    background-image: url("") !important;
+}
+
+.iconTimeTableLite{
+    background-image: url("") !important;
+}
+
+.iconTimeTableLink{
+    background-image: url("") !important;
+}
+
+.iconReport{
+    background-image: url("") !important;
+}
+.iconSetting{
+    background-image: url("") !important;
+}
+.iconProf{
+    background-image: url("") !important;
+}
+.iconAbsence{
+    background-image: url("") !important;
+}
+.iconAbsenceJustif{
+    background-image: url("") !important;
+}
+
+.iconAttendanceTeams{
+    background-image: url("") !important;
+}
+.iconAttendanceTeamsArch{
+    background-image: url("") !important;
+}
+.iconEvalItem{
+    background-image: url("") !important;
+}
+
+.iconEvalItem2{
+    background-image: url("") !important;
+}
+
+.iconEvalType{
+    background-image: url("") !important;
+}
+.iconRacapEval {
+    background-image: url("") !important;
+}
+.iconStudentEvals {
+    background-image: url("") !important;
+}
+.iconDashboard {
+    background-image: url("") !important;
+}
+.emailTrace-icon{
+    background-image: url("") !important;
+}
+.emailTest-icon{
+    background-image: url("") !important;
+}
+
+.iconPassword{
+    background-image: url("") !important;
+}
+.iconEvalSystem{
+    background-image: url("") !important;
+}
+.iconEvalSubSystem{
+    background-image: url("") !important;
+}
+.iconEvalProf{
+    background-image: url("") !important;
+}
+.iconDirectReport{
+    background-image: url("") !important;
+}
+.syncErp-icon{
+    background-image: url("") !important;
+}
+.iconPdf:after{
+    content: "\f1c1";
+    font-family: 'Font Awesome 5 Free';
+    /*font-weight: 900;*/
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    background-image: none;
+    background: #337ab7;
+    padding: 5px 6px;
+    margin: 0;
+    color: #fff;
+    border-radius: 3px;
+}
+.iconMention{
+    background-image: url("") !important;
+}
+.iconDecision{
+    background-image: url("") !important;
+}
+.iconDecisionFormula{
+    background-image: url("") !important;
+}
+.iconPv{
+    background-image: url("") !important;
+}
+.iconPresence{
+    background-image: url("") !important;
+}
+
+.iconSanction {
+    background-image: url("") !important;
+}
+.iconMailing {
+    background-image: url("") !important;
+}
+
+.iconDuplicateTTs:after{ 
+    content: "\f0c5" ;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    background-image: none !important;
+    background: #337ab7 ;
+    padding: 5px 6px ;
+    margin: 0 ;
+    color: #fff;
+    border-radius: 3px;
+}
+.iconAgreementTemplate {
+    background-image: url("") !important;
+}
+.iconVirtualClass:after {
+    content: "\f51c" ;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    background-image: none !important;
+    background: #337ab7 ;
+    padding: 5px 6px ;
+    margin: 0 ;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.iconGenerateTTLites:after{ 
+    content: "\f1c1" ;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    background-image: none !important;
+    background: #337ab7 ;
+    padding: 5px 6px ;
+    margin: 0 ;
+    color: #fff;
+    border-radius: 3px;
+}
+.iconFolder:after{
+    content: "\f07c" ;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    background-image: none !important;
+    /*background: #337ab7 ;*/
+    background: #acb8c1 ;
+    padding: 5px 6px ;
+    margin: 0 ;
+    /*color: #fff;*/
+    color: #ab8b13;
+    border-radius: 3px;  
+}
+
+.iconQuartz {
+    background-image: url("") !important;
+}
+.iconProfessorFees{
+    background-image: url("") !important;
+}
+.iconInternshipType{
+    background-image: url("") !important; 
+}
+.iconDegree{
+    background-image: url("") !important; 
+}
+
+.iconPaymentArrangement{
+    background-image: url("") !important;
+}
+.iconInternshipAssignement{
+    background-image: url("") !important; 
+}
+
+.iconInternshipTerritory {
+    background-image: url("") !important;
+}
+.iconGlobal{
+    background-image: url("") !important; 
+}
+.iconActivity{
+    background-image: url("") !important; 
+}
+
+.iconParent{
+    background-image: url("") !important; 
+}
+.iconPermission {
+    background-image: url("") !important; 
+}
+
+.iconAudit {
+    background-image: url("") !important; 
+}
+.iconFollowUpMeeting{
+    background-image: url("") !important;
+}
+.iconInternshipCompany {
+    background-image: url("") !important; 
+}
+
+.iconInternshipNature {
+    background-image: url("") !important; 
+}
+.iconProcessingGroup{
+    background-image: url("") !important;
+}
+.iconTicketStatus{
+    background-image: url("") !important;
+}
+.iconTicketType{
+    background-image: url("") !important; 
+}
+.iconStudentCredit{
+    background-image: url("") !important;
+}
+.iconStudentExternalUnitCredit{
+    background-image: url("") !important;
+}
+.iconinternshipDefense{
+    background-image: url("") !important;
+}
+
+.iconLevel {
+    background-image: url("") !important;
+}
+.iconNotification{
+    background-image: url("") !important; 
+}
+.iconReportCategory{
+    background-image: url("") !important; 
+}
+.iconCible {
+    background-image: url("") !important; 
+}
+.iconFlashNews{
+    background-image: url("") !important; 
+}
+.iconProfessorExecutedHours{
+    background-image: url("") !important; 
+}
+.iconActuality{
+    background-image: url("") !important; 
+}
+.iconDocument{
+    background-image: url("") !important; 
+}
+.iconGallery{
+    background-image: url("") !important; 
+}
+.iconCv{
+    background-image: url("") !important; 
+}
+.iconJobOffer{
+    background-image: url("") !important; 
+}
+.iconInternshipOffer{
+    background-image: url("") !important; 
+}
+.iconPaymentAuthorization{
+
+    background-image: url("") !important; 
+}
+.iconTicket{
+    background-image: url("") !important; 
+}
+.iconTicketCategory{
+    background-image: url("") !important; 
+}
+.iconPreferences{
+    background-image: url("") !important; 
+}
+.iconStudentLevel{
+    background-image: url("") !important; 
+}
+.iconInscriptionStatus{
+    background-image: url("") !important; 
+}
+.iconProspects {
+    background-image: url("") !important; 
+}
+
+.iconPreRegistration {
+    background-image: url("") !important; 
+}
+
+.iconRegistrationForm {
+    background-image: url("") !important; 
+}
+
+.iconUniqueCondition {
+    background-image: url("") !important; 
+}
+
+.iconRegistrationFiles {
+    background-image: url("") !important; 
+}
+
+.iconCustomFields {
+    background-image: url("") !important; 
+}
+
+.iconRegistrationSource {
+    background-image: url("") !important; 
+}
+
+.iconProfession {
+    background-image: url("") !important; 
+}
+.iconSSOServiceProvider{
+    background-image: url("") !important; 
+}
+
+.iconVaccinationPass{
+    background-image: url("") !important; 
+}
+.actions-column .iconDownload:after{ 
+    content: "\f019" ;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    background-image: none !important;
+    background: #32ac74;
+    padding: 5px 6px ;
+    margin: 0 ;
+    color: #fff;
+    border-radius: 3px;
+}
+.iconPublish:after { 
+    content: "\f1e0";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    background-image: none;
+    background: #54ac57;
+    padding: 5px 6px;
+    margin: 0;
+    color: #fff;
+    border-radius: 3px;
+}
+.iconUnpublish:after { 
+    content: "\f1e0";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    background-image: none;
+    background: #ee465a;
+    padding: 5px 6px;
+    margin: 0;
+    color: #fff;
+    border-radius: 3px;
+}
+.workingPeriod-icon{
+    background-image: url("") !important;
+}
+.holidays-icon{
+    background-image: url("") !important;
+}
+
+.restClient-icon{
+    background-image: url("") !important;
+}
+
+.restRole-icon{
+    background-image: url("") !important;
+}
+
+.restAuthority-icon{
+    background-image: url("") !important;
+}
+.iconImportHist{
+    background-image: url("") !important;
+}
+
+.iconStudentSelfData {
+    background-image: url("") !important;
+}
+
+.iconExamPlanHeader  {
+    background-image: url("") !important;
+}
+
+.iconExamScheduleHeader  {
+    background-image: url("") !important;
+}
+
+.iconInternshipProgressState {
+    background-image: url("") !important;
+}
+.iconExamConvocation {
+    background-image: url("") !important;
+}
+.iconExamConvocationStudent {
+    background-image: url("") !important;
+}
+
+.iconExamConvocationTracking {
+    background-image: url("") !important;
+}
+.iconExamStudentGlobalAttendance{
+    background-image: url("") !important;
+}
+.iconExamAttendance{
+    background-image: url("") !important;
+}
+
+.iconResetSchoolYearStatus:after { 
+    content: "\f51a";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    background-image: none;
+    background: #2aa72f;
+    padding: 5px 6px;
+    margin: 0;
+    color: #fff;
+    border-radius: 3px;
+}
+.accessLog-icon{
+    background-image: url("") !important;
+}
+
+.iconCourseContent {
+    background-image: url("") !important;
+}
+
+.iconPaymentTransaction {
+    background-image: url("") !important;
+}
+
+.iconBankTransferProof {
+    background-image: url("") !important;
+}
+
+.iconDocumentCategory {
+    background-image: url("") !important;
+}
+
+.iconSquare:after { 
+    font-family: 'Font Awesome 5 Free';
+    /*font-weight: 900;*/
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    background-image: none;
+    padding: 5px 7px;
+    margin: 0;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.iconForum:after {
+    content: "\f4ad";
+    background: #e52506;
+}
+.iconGeneratedDiploma{
+    background-image: url("") !important;
+}
+.iconCertificate{
+    background-image: url("") !important; 
+}
+.iconBuilding {
+    background-image: url("") !important; 
+}
+
+.iconMyClasses{
+    background-image: url("") !important;
+}
+
+.iconBookCategory{
+    background-image: url("") !important;
+}
+
+.iconBookStudent{
+    background-image: url("") !important;
+}
+
+.iconDish{
+    background-image: url("") !important;
+}
+
+.iconCanteenMenu{
+    background-image: url("") !important;
+}
+
+.iconCanteenPaidMenu{
+    background-image: url("") !important;
+}
+
+.iconTransportRoute{
+    background-image: url("") !important;
+}
+
+.iconPickPoint{
+    background-image: url("") !important;
+}
+
+.iconDailyFeedback{
+    background-image: url("") !important;
+}
+.iconAcademicServiceProvider{
+    background-image: url("") !important;
+}
+.iconProduct{
+    background-image: url("") !important;
+}
+.iconDeliveryReceipt{
+    background-image: url("") !important;
+}
+.iconHomeworkStatus{
+    background-image: url("") !important;
+}
+.iconTax{
+    background-image: url("") !important;
+}
+.iconDiscount{
+    background-image: url("") !important;
+}
+.iconMedicalExam{
+    background-image: url("") !important;
+}
+.iconSendValidationRequest:after {
+    content: "\f1d8" ;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    background-image: none !important;
+    background: #9400D3 ;
+    padding: 5px 6px ;
+    margin: 0 ;
+    color: #fff;
+    border-radius: 3px;
+}

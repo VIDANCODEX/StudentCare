@@ -1,0 +1,1066 @@
+footer a {
+    color: #007bff;
+}
+
+footer a:hover {
+    color: #92c7ff;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.sge-portal-footer-1 {
+    background-color: #83bac6;
+}
+
+li.nav-item:hover {
+    background-color: #82d0cc;
+}
+
+.sge-portal .navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.sge-portal.fixed-top {
+    top: 40px;
+}
+
+.sge-profile-page .sge-user-photo {
+    max-width: 100%;
+}
+
+.ui-datatable-tablewrapper tbody {
+    font-size: 12px;
+}
+
+.ui-datatable-tablewrapper thead {
+    font-size: 14px;
+}
+
+@media (max-width: 992px) {
+    .sge-profile-page .sge-user-photo {
+        max-width: 256px;
+    }
+
+    .sge-user-profile-info {
+        margin-bottom: 20px;
+    }
+
+    .sge-support-info {
+        display: none;
+    }
+
+    .sge-profile-page dt {
+        text-align: left !important;
+    }
+}
+
+/*.sge-profile-page dt {
+    text-align: right;
+}*/
+
+.sge-announcement {
+    /*background-color: #414141;*/
+    /*color: #fff;*/
+}
+
+.sge-announcement .carousel-control-next, .sge-announcement .carousel-control-prev {
+    width: auto;
+    margin: auto -10px;
+}
+
+#announcementsCaroussel {
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 100%;
+    text-align: justify;
+}
+
+.sge-announcement-header {
+    margin-left: -30px;
+    margin-right: -30px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 27px;
+    font-weight: 700;
+    /*padding-left: 30px;*/
+    border-bottom: 3px solid;
+    margin-bottom: 15px;
+    color: #275e7a;
+}
+
+.sge-annoucement-title {
+    font-weight: bold;
+}
+
+.sge-annoucement-date {
+    text-align: right;
+    font-size: 11px;
+    line-height: 24px;
+}
+
+.sge-announcement-head {
+    border-bottom: 1px dotted #555;
+    margin-bottom: 14px;
+}
+
+.carousel-flash-news .carousel-caption {
+    left: 10%;
+    right: 10%;
+}
+
+.carousel-flash-news .carousel-control-next, .carousel-flash-news .carousel-control-prev {
+    width: 10%;
+}
+
+.carousel-flash-news {
+    border: 1px solid #d1d1d1;
+    box-shadow: 0px 15px 10px -15px #111;
+}
+
+.carousel-flash-news .carousel-item {
+    min-height: 300px;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("") !important;
+}
+
+.carousel-control-next-icon {
+    background-image: url("") !important;
+}
+
+.carousel-indicators .active {
+    background-color: #161616 !important;
+}
+
+.carousel-indicators li {
+    background-color: #6e6e6e !important;
+}
+
+.sge-doc {
+    background-size: 56px !important;
+    background-position-x: 103% !important;
+    background-position-y: -1% !important;
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.card-title {
+    /*padding-right: 30px;*/
+    color: #275e7a;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #275e7a;
+    padding-bottom: 5px;
+}
+
+.sge-home-widget .card-footer {
+    border-top: 3px solid rgba(0,0,0,.125);
+}
+
+/* Slier */
+.sge-slider-spin {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    text-align:center;
+    background-color:rgba(0,0,0,0.7);
+}
+
+.sge-slider-item {
+    position:absolute;
+    top:320px;
+    left:30px;
+    width:500px;
+    height:200px;
+    font-family:Oswald,sans-serif;
+    font-size:32px;
+    font-weight:200;
+    line-height:1.2;
+    text-align:center;
+    background-color:rgba(255,188,5,0.6);
+}
+
+.sge-documents-carousel .carousel-caption {
+    top: 0;
+    padding: 0;
+    right: 0;
+    left: 0;
+}
+
+.page-title {
+    border-bottom: 1px solid #d9f1ff;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.page-title > h1 {
+    border-bottom: 8px solid #d9f1ff;
+    font-weight: bold;
+    width: fit-content;
+    width: -moz-max-content;
+    margin-bottom: 0;
+    font-size: 2rem;
+    color: #065d78;
+    margin-top: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+th.ui-state-default {
+    text-shadow: none;
+    border-radius: 0;
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.06) 51%, rgba(0, 0, 0, 0.04)) !important;
+    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.06) 51%, rgba(0, 0, 0, 0.04)) !important;
+    background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.06) 51%, rgba(0, 0, 0, 0.04)) !important;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.06) 51%, rgba(0, 0, 0, 0.04)) !important;
+}
+
+.ui-accordion .ui-accordion-header .ui-icon {
+    display: block;
+}
+
+.ui-accordion-header.ui-state-default {
+    border: 1px solid #c8c8c8;
+    border-radius: 0;
+    background-color: #f4f4f4;
+    font-weight: 700;
+    position: static;
+    margin-top: 1px;
+    -moz-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.06) 51%, rgba(0, 0, 0, 0.04)) !important;
+    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.06) 51%, rgba(0, 0, 0, 0.04)) !important;
+    background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.06) 51%, rgba(0, 0, 0, 0.04)) !important;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.06) 51%, rgba(0, 0, 0, 0.04)) !important;
+}
+
+.ui-accordion-header.ui-state-hover {
+    background-color: #e3e1e1;
+}
+
+.ui-accordion-header.ui-state-active {
+    background-color: #d5f0ff;
+}
+
+.ui-accordion .ui-accordion-content.ui-widget-content {
+    border: 1px solid #c8c8c8;
+}
+
+.sge-evals-page .ui-datatable-header, .sge-internships-page .ui-datatable-header .sge-studies-plan-page  .ui-datatable-header{
+    background-color: transparent;
+}
+
+.sge-table-date {
+    width: 130px;
+    text-align: center;
+}
+
+.sge-table-time-range {
+    width: 130px;
+    text-align: center;
+}
+
+.sge-icon {
+    color: #5f9ea0;
+}
+
+.sge-my-profile-list-style {
+    list-style-type: square;
+}
+
+/* NEWS */
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 10px 1fr;
+    grid-template-areas: "big topr" "big sep" "big botr";
+    grid-column-gap: 10px;
+}
+
+.big { grid-area: big; }
+.topr { grid-area: topr; }
+.botr { grid-area: botr; }
+.sep { grid-area: sep; }
+
+.grid-container img, .sge-news-grid-container img {
+    width: 100%;
+    /*height: 100%;*/
+    box-shadow: 2px 2px 10px 0px #909ea7;
+}
+
+.sge-news-grid-container {
+    /*border-bottom: 1px dotted #bebdbd;*/
+    margin-bottom: 7px !important;
+}
+.sge-news-title {
+    font-weight: bold;
+    display: inline-block;
+    text-transform: uppercase;
+}
+.sge-news-date {
+    color: #666666;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 10px;
+    padding: 5px 0 10px;
+}
+
+.sge-news-summary {
+    border-top: 1px dotted #bebdbd;
+    padding-top: 7px;
+}
+
+.hovereffect {
+    float:left;
+    overflow:hidden;
+    position:relative;
+    text-align:center;
+    cursor: default;
+}
+
+.hovereffect img {
+    display:block;
+    position:relative;
+    -webkit-transition:all .4s linear;
+    transition:all .4s linear;
+}
+
+.hovereffect .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+.hovereffect a.info {
+    /*display: inline-block;*/
+    text-decoration: none;
+    padding: 7px 14px;
+    border: 1px solid #fff;
+    margin: auto;
+    /*margin: 50px 0 0 0;*/
+    /*background-color: transparent;*/
+}
+
+.hovereffect a.info:hover {
+    box-shadow: 0 0 5px #fff;
+    /*background-color: rgba(0, 123, 255, 0.65);*/
+}
+
+.hovereffect a.info {
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+    -webkit-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.hovereffect:hover a.info {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
+.hovereffect:hover img {
+    filter: url("");
+    filter: grayscale(1) blur(3px);
+    -webkit-filter: grayscale(1) blur(3px);
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+/* Breadcrumb */
+.sge-breadcrumb {
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.row-striped:nth-of-type(odd){
+    background-color: #fbfbfb;
+    /*border-left: 4px #17a2b8 solid;*/
+}
+
+.row-striped:nth-of-type(even){
+    background-color: #ffffff;
+    /*border-left: 4px #d6e5ee solid;*/
+}
+
+.row-striped {
+    padding: 5px 0;
+}
+
+.sge-display-5 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 0;
+}
+
+.sge-current-tti {
+    position: absolute;
+    top: 2px;
+    right: 1px;
+    background-color: #00ff00;
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 100%;
+}
+
+.sge-timetable-widget .sge-course-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 13px;
+}
+
+.sge-attendance-widget .badge {
+    font-size: 15px;
+}
+
+.sge-doc-name {
+    font-size: 13px;
+}
+
+/* POLL */
+.panel-body:not(.two-col) { padding:0px }
+.panel-body .radio,.panel-body .checkbox {margin-top: 0px;margin-bottom: 0px;}
+.panel-body .list-group {margin-bottom: 0;}
+.margin-bottom-none { margin-bottom: 0; }
+.panel-body .radio label,.panel-body .checkbox label { display:block; }
+
+/* STAGES */
+
+.sge-portal-internship-box {
+    -webkit-box-shadow: 0px 10px 21px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 21px -6px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 21px -6px rgba(0,0,0,0.75);
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+}
+
+.sge-portal-internship-box .card  {
+    border: 0;
+}
+
+.sge-internsip-offers-page .ui-widget-content,
+.sge-job-offers-page .ui-widget-content {
+    border: 0;
+}
+
+.sge-internsip-offers-page .ui-datalist-content.ui-widget-content > ul,
+.sge-job-offers-page .ui-datalist-content.ui-widget-content > ul {
+    padding: 0;
+}
+
+.sge-internsip-offers-page .ui-widget-header,
+.sge-job-offers-page .ui-widget-header {
+    background-color: transparent;
+    border: 0;
+}
+
+.sge-internsip-offers-page .ui-paginator .ui-paginator-current,
+.sge-job-offers-page .ui-paginator .ui-paginator-current {
+    float: left;
+}
+
+.generate-timeTable-modal .ZebraDialog_Body{
+    overflow: visible;
+}
+
+.fc-body.sge-monochrome .fc-event {
+    background-color: #d6d6d6 !important;
+    color: #000000 !important;
+}
+.fc-icon-sge-calendar-monochrome:before{
+    content: "\f1fc";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+td.fc-axis.fc-time span:after {
+    content: "" !important;
+}
+
+.sge-job-company-table tr > td:nth-child(odd) {
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: top;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-right: 10px;
+    text-align: right;
+}
+
+.sge-job-company-table tr:last-child {
+    border-bottom: 0;
+}
+
+.sge-job-company-table tr {
+    border-bottom: 1px solid #eee;
+}
+
+.sge-flash-info-title {
+    margin-left: -10%;
+    margin-right: -10%;
+}
+
+.ZebraDialog_Body  {
+    padding: 26px;
+}
+
+.text-first-question{
+    color: #343a40!important;
+    /*margin-left: -45%;*/
+    margin-top: 5%
+}
+.nav-item.sge-menu-self > a {
+    font-size : 16px !important;
+}
+
+.user-menu, .school-menu {
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.user-menu:hover, .school-menu:hover {
+    background-color: #1e1e1e;
+}
+
+.user-menu .dropdown-item , .school-menu .dropdown-item{
+    line-height: initial;
+}
+header .dropdown-item {
+    line-height: initial;
+}
+
+header .dropdown .ui-widget .ui-widget {
+    font-size: 1rem;
+}
+
+
+.text-title-poll{
+    /*color: #17a2b8!important;*/
+    /*margin-left: -45%;*/
+    margin-top: 5%;
+    /*text-align: center;*/
+}
+.carousel-caption-poll-Widget {
+    position: absolute;
+    bottom: 20px;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: left;
+    width: 100%;
+}
+
+.carousel-control-next-poll-Widget, .carousel-control-prev-poll-Widget {
+    position: absolute;
+    top: 0px;
+    bottom: 26px;
+    display: -ms-flexbox;
+    display: contents;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 3%;
+    color: #fff;
+    text-align: center;
+    opacity: .5;
+    align-self: flex-start;
+    /* left: 28%; */
+}
+
+.poll-card-body {
+    /*background-color: #feffc9;*/
+    padding: 6px !important;
+    border: 1px solid;
+}
+
+/*.carousel-inner-poll-widget {
+    position: relative;.text-title-poll
+    width: 100%;
+    overflow: auto; 
+    overflow-x: hidden;
+
+}*/
+.customcheckbox .ui-selectmanycheckbox label {
+    vertical-align: middle;
+    cursor: pointer;
+    margin: 0 16px 0 8px;
+    outline: medium none;
+    z-index: 1;
+    display: inline;
+}
+.ui-dialog.ui-widget-content.sge-ui-dialog .ui-dialog-titlebar {
+    border-radius: 0px;
+    background: #e9e9e9;
+    color: #333333;
+    font-weight: bold;
+    font-size: 14px;
+}
+.ui-dialog.ui-widget-content.sge-ui-dialog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    outline: 0;
+}
+.ui-dialog.ui-widget-content.sge-ui-dialog .ui-dialog-titlebar .ui-button{
+    background-color: transparent;
+    border: none;
+}
+.mt-3-poll-widget{
+    margin-top: 0rem!important;
+}
+
+#carouselStudentSurveies .carousel-indicators {
+    bottom: -29px;
+}
+
+.noheader .ui-panelgrid-cell .ui-widget-header {
+    display: none !important;
+
+}
+.noborder.ui-panelgrid tr {
+    border: 0 transparent;
+    background: transparent none;
+}
+
+.grey{
+    background-color:#d0dddb;
+    background-image:none;
+}
+
+.red{
+    background-color:#FA8072;
+    background-image:none;
+}
+
+.sge-news-page .ui-widget-header,
+.sge-documents-page .ui-widget-header,
+.sge-galleries-page .ui-widget-header{
+    background-color: transparent;
+    border: 0;
+}
+
+.sge-news-page .sge-new-grid .ui-widget-content, 
+.sge-documents-page .sge-new-grid .ui-widget-content,
+.sge-galleries-page .sge-new-grid .ui-widget-content,
+.sge-courses-page .sge-new-grid .ui-widget-content,
+.sge-professors-page .sge-new-grid .ui-widget-content,
+.sge-emp-docs-page .sge-new-grid .ui-widget-content, 
+.sge-cv-page .sge-new-grid .ui-widget-content  {
+    border: 0;
+}
+
+.card {
+    margin-top: 20px;
+    border: 0;
+}
+
+.sge-news-view img {
+    max-width: 100%;
+}
+
+.flash-news-body {
+    text-align: justify;
+    display: inline-block;
+    width: 100%;
+}
+
+/*.flash-news-body:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}*/
+
+/* Attendance widget */
+.attendance-bar-chart {
+    height: 36px;
+    background-color: #898989;
+    margin: 5px 0;
+    position: relative;
+    display: table;
+    width: 100%;
+    border-radius: 7px;
+}
+
+.attendance-progress {
+    height: 100%;
+    width: 50%;
+    border-radius: 7px 0 0 7px;
+    position: absolute;
+    background: rgb(216,224,222);
+    background: -moz-linear-gradient(top,  rgb(112, 112, 112) 0%, rgba(167, 167, 167,1) 22%, rgba(112, 112, 112,1) 33%, rgba(34, 34, 34,1) 100%);
+    background: -webkit-linear-gradient(top,  rgb(112, 112, 112) 0%,rgba(167, 167, 167,1) 22%,rgba(112, 112, 112,1) 33%,rgba(34, 34, 34,1) 100%);
+    background: linear-gradient(to bottom,  rgb(112, 112, 112) 0%,rgb(167, 167, 167) 22%,rgb(112, 112, 112) 33%,rgb(34, 34, 34) 100%);
+    background: linear-gradient(to bottom, rgb(112, 112, 112) 0%,rgb(167, 167, 167) 22%,rgb(112, 112, 112) 33%,rgb(34, 34, 34) 100%);
+}
+
+.attendance-content {
+    position: relative;
+    color: #fff;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 6px;
+    width: 100%;
+}
+
+.card-body .ui-outputpanel-loading.ui-widget {
+    text-align: center;
+    width: 100%;
+}
+
+.my-profile-section-h {
+    border-bottom: 1px solid #cecece;
+    color: #707070;
+    margin-bottom: 15px;
+}
+
+.sge-home-widget .card {
+    height: 90%;
+}
+
+.sge-home-widget .ui-widget {
+    height: 90%;
+}
+
+.flat-step-indicator {
+    padding: 15px;
+    background-color: #eee;
+}
+
+@media (max-width: 1200px) {
+    .customSteps {
+        display: none;
+    }
+
+    .step-indicator-panel {
+        display: block;
+    }
+}
+
+@media (min-width: 1199px) {
+    .step-indicator-panel {
+        display: none;
+    }
+}
+
+
+.sge-courses-page dt {
+    float: left;
+    clear: left;
+    width: 120px;
+    font-weight: bold;
+    min-width: 120px;
+}
+.sge-courses-page dt::after {
+    content: ":";
+}
+.sge-courses-page dd {
+    margin: 0 0 0 120px;
+    padding: 0 0 0.2em 0;
+}
+
+/* ChatBot */
+/*.ui-slideouttab-ready > .chatbot-handle:before{
+    content: "\f086";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    margin-right: 5px;
+    
+}
+
+.ui-slideouttab-ready > .chatbot-handle:after{
+    content: "\f077";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    margin-left: 10px;
+    
+}
+.ui-slideouttab-open > .chatbot-handle:after{
+    content: "\f078";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    margin-left: 10px;
+}*/
+
+a.ui-slideouttab-handle.chatbot-handle {
+    background-color: transparent;
+    color: #fff;
+    width: 90px;
+    height: 100px;
+    background-image: url("");
+    background-size: cover;
+}
+
+/*a.ui-slideouttab-handle.chatbot-handle:hover {
+    color: #ffd6e3;
+}*/
+
+.chatbot-panel {
+    right: 0;
+    left: auto !important;
+}
+
+.chatbot-handle {
+    right: 0;
+    left: auto !important;
+}
+
+@media (max-width: 992px) {
+    a.ui-slideouttab-handle.chatbot-handle {
+        width: 80px;
+        height: 70px;
+    }
+}
+
+
+/* Employabilité */
+#html5-watermark {
+    display: none !important;
+}
+
+.emp-contact-photo img {
+    box-shadow: 0 20px 30px -15px rgba(0, 0, 0, 0), 0 21px 20px -15px rgba(0, 0, 0, 0.76), 0 10px 8px -20px rgba(0, 0, 0, 0), 0 10px 60px -5px rgba(21, 0, 3, 0);
+}
+
+.emp-contacts {
+    border-top: 1px solid #d6d6d6;
+    margin-top: 20px;
+}
+
+.emp-contact {
+    border-bottom: 1px solid #d6d6d6;
+}
+
+.sge-emp-docs-page .ui-datascroller .ui-datascroller-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.sge-emp-docs-page .ui-datascroller .ui-datascroller-item {
+    width: 100%;
+}
+
+.sge-emp-docs-page .ui-datascroller-content.ui-widget-content {
+    border: 0;
+    padding: 0;
+}
+
+.sge-emp-docs-page .gallery-block {
+    padding-top: 0;
+}
+
+.emp-filter {
+    display: flex;
+    align-items: center;
+    border: 1px solid #b2b2b2;
+    border-radius: 3px;
+    position: relative;
+    padding-top: 20px;
+    padding-right: 10px;
+    flex-direction: column;
+}
+
+.emp-filter .legend {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: white;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.emp-filter .filter-item {
+    flex: 1;
+}
+
+@media (min-width: 992px) {
+    .sge-emp-docs-page .ui-datascroller .ui-datascroller-item {
+        flex: 49%;
+        flex-grow: 0;
+    }
+
+    .emp-filter {
+        flex-direction: row;
+    }
+}
+
+.show-rating {
+    cursor: pointer;
+}
+
+.rating-panel .rating-stars {
+    position: absolute;
+    right: 26px;
+    top: -3px;
+    background-color: #ffffff;
+    border: 1px solid #d7d7d7;
+    border-radius: 5px;
+    padding: 3px 5px 0 5px;
+    display: none;
+}
+.actuality-menu {
+    line-height: 1.5;
+}
+div.dropdown-menu.actuality-menu.show {
+    top: 37px!important;
+    left: 210px!important;
+}
+
+.bootstrap-dialog-message {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.study-plan-dt th.ui-state-default {
+    background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6) !important;
+}
+
+.job-offer-attachment.ui-dataview .ui-dataview-header {
+    display: none;
+}
+.job-offer-attachment.ui-dataview .ui-dataview-content {
+    border: 0;
+}
+
+.job-offer-attachment.ui-dateview .ui-dataview-list-container .ui-dateview-row{
+    border: 1px!important;
+}
+
+.max-w-500px {
+    max-width: 500px;
+}
+
+
+.attachment-container {
+    background-color: #f6f6f6;
+    border: 2px solid #e9e9e9;
+    border-radius: 6px;
+}
+
+.attachment-download {
+    background-color: #fff;
+    opacity: 0.7;
+}
+
+.attachment-download:hover {
+    opacity: 1;
+}
+
+.attachment-download img {
+    max-width: 90px;
+}
+
+.syll-accepted-modal .bootstrap-dialog-footer {
+    width: 100%;
+}
+
+.syll-accepted {
+    font-size: 20px;
+    float: left;
+}
+
+.sge-menu-text {
+    white-space: nowrap;
+}
+
+
+/* datagrid responsive */
+
+@media screen and (min-width: 640px) {
+    .sge-professors-page .ui-md-4, .sge-courses-page .ui-md-4 {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .sge-professors-page .ui-md-4, .sge-courses-page .ui-md-4 {
+        width: 33.33333333%;
+    }
+}
+
+.sge-main-menu .dropdown-menu .dropdown-item {
+    font-size: 1rem;
+}
+
+/* biblio */
+.sge-books-page .hovereffect {
+    max-height: 250px;
+}
+
+.sge-books-page .ui-datagrid-column {
+    display: flex;
+}
+
+/*.sge-books-page .sge-news-summary {
+    min-height: 150px;
+}*/
+/* end biblio */
+
+.ui-dialog p {
+    margin-bottom: 0px;
+}
+
+.canteen-menu-dlg svg g [fill] {
+    -webkit-transition: fill .3s ease;
+    transition: fill .3s ease;
+    fill: var(--main-color) !important;
+}
+
+.alert-message {
+    margin: 20px 0;
+    padding: 20px;
+    border-left: 3px solid #eee;
+}
+.alert-message h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.alert-message-danger {
+    background-color: #fdf7f7;
+    border-color: #d9534f;
+}
+.alert-message-danger h4 {
+    color: #d9534f;
+}
+.alert-message-warning {
+    background-color: #fcf8f2;
+    border-color: #f0ad4e;
+}
+.alert-message-warning h4 {
+    color: #f0ad4e;
+}

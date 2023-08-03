@@ -1,0 +1,152 @@
+a {
+    color: #c82701;
+}
+
+a:hover {
+    color: #9f1e00;
+}
+
+header, footer {
+    background-color: #323232;
+}
+
+footer {
+    color: #fff;
+}
+
+header, header a {
+    color: #d2d2d2;
+}
+
+header a:hover {
+    color: #fff;
+}
+
+.sge-main-menu.navbar {
+    background-color: #c61900 !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #f5f5f5 !important;
+}
+
+li.nav-item:hover {
+    background-color: #860000;
+}
+.sge-main-menu li.nav-item.active, 
+.sge-main-menu .dropdown-item.active, 
+.sge-main-menu .dropdown-item:active, 
+.user-menu .dropdown-item:active, 
+.user-menu .dropdown-item.active ,
+.school-menu .dropdown-item:active, 
+.school-menu .dropdown-item.active {
+    background-color: #b50c0c;
+}
+
+.card-title {
+    color: #444444;
+    border-bottom: 1px solid #cccccc;
+}
+
+.page-title > h1 {
+    border-bottom: 8px solid #c61900;
+    color: initial;
+}
+
+.page-title {
+    border-bottom: 1px solid #c61900;
+}
+
+.sge-slider-title a {
+    color: #fff;
+}
+
+.sge-slider-title a:hover {
+    color: #ff3c3c;
+}
+
+.ui-accordion-header.ui-state-active {
+    background-color: #d8d8d8;
+}
+
+.btn-styled {
+    color: #fff !important;
+    background-color: #c41626 !important;
+    border-color: #c41626 !important;
+    background-image: none !important;
+}
+
+.btn-styled:hover {
+    color: #fff !important;
+    background-color: #e51c30 !important;
+    border-color: #e51c30 !important;
+}
+
+.sge-flash-news-pin {
+    background-image: url("");
+    background-size: cover;
+    width: 20px;
+    height: 28px;
+    display: inline-block;
+    margin-bottom: -7px;
+}
+
+.sge-public .sge-question-wrapper {
+    border-color: #c61900;
+    margin-top: 7px;
+}
+
+.sge-public .sge-question-number {
+    background-color: #c61900;
+    color: #fff;
+    text-shadow: 1px 1px 0px #000;
+}
+
+.hovereffect a.info {
+    background-color: rgba(231, 67, 67, 0.65);
+}
+
+.hovereffect a.info:hover {
+    background-color: rgba(198, 25, 0, 0.65);
+}
+
+.sge-theme-color {
+    color: #c61900;
+}
+
+.sge-public .sge-dlg-info.ui-dialog.ui-widget-content .ui-dialog-titlebar {
+    background-color: #c61900;
+}
+
+@media (max-width: 992px) {
+    #navbarResponsive .sge-main-menu > li a:not(.dropdown-item) {
+        border-bottom: 1px solid #fff;
+    }
+
+    .navbar-collapse {
+        background-color: #9b1400;
+    }
+
+    #navbarResponsive .sge-main-menu li.nav-item:hover {
+        background-color: rgba(208, 60, 60, 0.65);
+    }
+
+    #navbarResponsive .sge-main-menu .dropdown-menu {
+        background-color: rgba(0, 0, 0, 0.45);
+    }
+
+    #navbarResponsive .sge-main-menu .nav-link {
+        color: #fff !important;
+    }
+
+    #navbarResponsive .sge-main-menu .dropdown-item {
+        color: #fff;
+    }
+}
+
+body {
+    --main-color: #9b1400;
+    --second-color: #c61900;
+    /*    --main-color-65 : rgb(39 154 97 / 0.65);
+        --second-color-65 : rgb(29 132 81 / 0.65);*/
+}

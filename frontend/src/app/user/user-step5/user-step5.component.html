@@ -1,0 +1,100 @@
+<div class="main-container container">
+
+  <div class="page-title">
+    <h1 class="tracking-in-expand">Guide de la Carte Séjour</h1>
+  </div>
+
+
+
+
+    <div id="messagesRegion" aria-label="form feedback" aria-live="assertive" aria-relevant="additions">
+      <div id="form:messages">
+      </div>
+    </div>
+
+
+    <input type="hidden" name="_cid" value="1c2" id="cid">
+
+
+    <div class="box dark qz-edit-box">
+      <div id="div-1" class="body">
+
+        <input type="hidden" name="_cid" value="1c2" id="cid">
+        <table id="form:form_content" class="aria-role-presentation">
+          <tbody>
+          <tr>
+            <td></td>
+          </tr>
+          </tbody>
+        </table>
+        <table id="form:rest-form-content" class="aria-role-presentation">
+          <tbody>
+          <tr>
+            <td></td>
+          </tr>
+          </tbody>
+        </table>
+
+        <form #form="ngForm" (ngSubmit)="onNext()">
+        <div class="container-main">
+          <div class="outer-wrapper">
+            <div id="form:cvSectionsSteps" class="ui-steps ui-widget ui-helper-clearfix customSteps steps-10">
+              <ul role="tablist">
+                <li class="ui-steps-item ui-state-default ui-corner-all" role="tab"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-steps-number">1</span><span class="ui-steps-title">Bienvenue</span></a></li>
+                <li class="ui-steps-item ui-state-default ui-corner-all" role="tab"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-steps-number">2</span><span class="ui-steps-title">Conditions</span></a></li>
+                <li class="ui-steps-item ui-state-default ui-corner-all" role="tab"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-steps-number">3</span><span class="ui-steps-title">Acceptation</span></a></li>
+                <li class="ui-steps-item ui-state-default ui-corner-all" role="tab"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-steps-number">4</span><span class="ui-steps-title">Félicitation</span></a></li>
+                <li class="ui-steps-item ui-state-highlight ui-corner-all" role="tab"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-steps-number">5</span><span class="ui-steps-title">Validation</span></a></li>
+                <li class="ui-steps-item ui-state-default ui-corner-all" role="tab"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-steps-number">6</span><span class="ui-steps-title">Attente</span></a></li>
+                <li class="ui-steps-item ui-state-default ui-corner-all" role="tab"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-steps-number">7</span><span class="ui-steps-title">Rappel</span></a></li>
+                <li class="ui-steps-item ui-state-default ui-corner-all" role="tab"><a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-steps-number">8</span><span class="ui-steps-title">Fin</span></a></li>
+              </ul>
+            </div>
+            <div id="form:j_idt296"></div>
+            <hr>
+
+            <div id="form:section-wrapper" class="ui-outputpanel ui-widget position-relative">
+              <div id="form:j_idt325" class="ui-outputpanel ui-widget">
+                <div id="form:j_idt326" class="ui-outputpanel ui-widget d-flex gap-10">
+                  <img src="assets/pic.png">
+                  <span class="flex-grow-1">
+                    <span style="font-size:20px;"><strong>Validation de la Carte Séjour</strong></span>
+                    <hr>
+                    <br>
+                    Veuillez joindre une photo de votre carte séjour provisoire
+                    <br>
+                    <br>
+
+                    <div class="ui-fileupload-buttonbar ui-widget-header ui-corner-top" style="width: 117.4px; border-left-width: 1px; margin-left: 10px;">
+                      <span class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left ui-fileupload-choose" tabindex="0" role="button" aria-labelledby="form:file_label">
+                        <span class="ui-button-icon-left ui-icon ui-c fas fa-folder-open"></span>
+                        <span id="form:file_label" class="ui-button-text ui-c">Parcourir</span>
+                        <input type="file" (change)="onFileSelected($event)" id="form:file_input" name="form:file_input">
+                      </span>
+                    </div>
+
+                    <br>
+                    <span style="font-size:20px;"><strong>Date de la Carte Séjour provisoire</strong></span>
+                    <div id="form:j_idt403" class="ui-outputpanel ui-widget form-group">
+                      <div class="sge-calendar-icon"></div>
+                      <span id="form:birthDate" class="ui-calendar">
+
+                        <input id="form:birthDate_input" (change)="onDateSelected($event)" type="date" class=" ui-widget  ui-corner-all form-control">
+
+                      </span>
+                    </div>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <button type="submit" id="form:hideAdvise" class="ui-commandlink ui-widget btn btn-lg btn-styled float-right pull-right">
+          <i class="fas fa-check mr-2"></i>Suivant
+        </button>
+      </form>
+      </div>
+    </div>
+</div>

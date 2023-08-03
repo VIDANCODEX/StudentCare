@@ -1,0 +1,154 @@
+<app-user-header></app-user-header>
+
+<div class="main-container container" style="margin-top: 50px;">
+  <input type="hidden" name="j_idt254" value="j_idt254" wfd-invisible="true">
+    <input type="hidden" name="_cid" value="1c2" id="cid" wfd-invisible="true">
+    <input id="j_idt254:_cid" type="hidden" name="j_idt254:_cid" value="1c2" wfd-invisible="true">
+    <input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:7" value="-7533580966967624620:7942874645225388422" autocomplete="off" wfd-invisible="true">
+
+
+  <div class="page-title">
+    <h1 class="tracking-in-expand">Guide de la Carte Séjour</h1>
+  </div>
+
+  <input type="hidden" name="form" value="form">
+
+    <div id="messagesRegion" aria-label="form feedback" aria-live="assertive" aria-relevant="additions">
+      <div id="form:messages">
+      </div>
+    </div>
+
+    <input type="hidden" name="_cid" value="1c2" id="cid">
+
+    <div class="box dark qz-edit-box">
+      <div id="div-1" class="body">
+
+        <input type="hidden" name="_cid" value="1c2" id="cid">
+        <table id="form:form_content" class="aria-role-presentation ">
+          <tbody>
+          <tr>
+            <td></td>
+          </tr>
+          </tbody>
+        </table>
+        <table id="form:rest-form-content" class="aria-role-presentation ">
+          <tbody>
+          <tr>
+            <td></td>
+          </tr>
+          </tbody>
+        </table>
+
+        <div class="container-main">
+          <div class="outer-wrapper">
+            <div id="form:cvSectionsSteps" class="ui-steps ui-widget ui-helper-clearfix customSteps steps-10">
+              <ul role="tablist">
+                <li class="ui-steps-item ui-state-default ui-corner-all" role="tab">
+                  <a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#">
+                    <span class="ui-steps-number">1</span>
+                    <span class="ui-steps-title">Bienvenue</span>
+                  </a>
+                </li>
+                <li class="ui-steps-item ui-state-default ui-corner-all" role="tab">
+                  <a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#">
+                    <span class="ui-steps-number">2</span>
+                    <span class="ui-steps-title">Conditions</span>
+                  </a>
+                </li>
+                <li class="ui-steps-item ui-state-highlight ui-corner-all" role="tab">
+                  <a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#">
+                    <span class="ui-steps-number">3</span>
+                    <span class="ui-steps-title">Acceptation</span>
+                  </a>
+                </li>
+                <li class="ui-steps-item ui-state-default ui-corner-all" role="tab">
+                  <a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#">
+                    <span class="ui-steps-number">4</span>
+                    <span class="ui-steps-title">Félicitation</span>
+                  </a>
+                </li>
+                <li class="ui-steps-item ui-state-default ui-corner-all" role="tab">
+                  <a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#">
+                    <span class="ui-steps-number">5</span>
+                    <span class="ui-steps-title">Validation</span>
+                  </a>
+                </li>
+                <li class="ui-steps-item ui-state-default ui-corner-all" role="tab">
+                  <a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#">
+                    <span class="ui-steps-number">6</span>
+                    <span class="ui-steps-title">Attente</span>
+                  </a>
+                </li>
+                <li class="ui-steps-item ui-state-default ui-corner-all" role="tab">
+                  <a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#">
+                    <span class="ui-steps-number">7</span>
+                    <span class="ui-steps-title">Rappel</span>
+                  </a>
+                </li>
+                <li class="ui-steps-item ui-state-default ui-corner-all" role="tab">
+                  <a tabindex="-1" class="ui-menuitem-link ui-corner-all" href="#">
+                    <span class="ui-steps-number">8</span>
+                    <span class="ui-steps-title">Fin</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div id="form:j_idt296"></div>
+            <hr>
+            <div id="form:section-wrapper" class="ui-outputpanel ui-widget position-relative">
+              <div id="form:j_idt325" class="ui-outputpanel ui-widget">
+                <div id="form:j_idt326" class="ui-outputpanel ui-widget d-flex gap-10">
+                  <!--Commentaire de referencement---->
+
+                  <span class="flex-grow-1">
+                    <span style="font-size:20px;"><strong>L'Acceptation du Dossier</strong></span>
+                    <hr>
+                    Si vous n’êtes pas soumis à la condition d’une demande de visa pour entrer en Tunisie, vous bénéficiez de 3 mois de séjour, à partir de la date d’arrivée. Si vous êtes soumis à la condition d’un visa, commencez par vérifier la durée de séjour qui vous a été accordée.
+                    <br>
+                    <br>
+                    Quel est le statut de votre demande de carte de séjour au poste de police :
+
+                    <br><br><br>
+                    <form #form="ngForm" (ngSubmit)="onNext()">
+                      <input type="radio" id="option1" name="options" value="accept" style="margin-left: 400px;" [(ngModel)]="selectedOption" (ngModelChange)="onOptionSelected('accept')">
+                      <label for="option1" class="radio-button">Accepté</label>
+
+                      <input type="radio" id="option2" name="options" value="refuse" style="margin-left: 100px;" [(ngModel)]="selectedOption" (ngModelChange)="onOptionSelected('refuse')">
+                      <label for="option2" class="radio-button">Refusé</label>
+                      <br><br>
+
+                      <div id="form:j_idt222" class="ui-outputpanel ui-widget form-group " style="">
+                      <div id="form:j_idt223" class="ui-outputpanel ui-widget form-control-placeholder" style="">
+                            <label for="form:comment" class=" ">Si refusé,pourquoi ?</label>
+                      </div>
+                      <textarea [(ngModel)]="Commentaire" id="form:comment" name="form:comment" class="ui-inputfield ui-inputtextarea ui-widget ui-state-default ui-corner-all ui-inputtextarea-resizable" cols="37" rows="3" placeholder="Ecrire un commentaire ..." maxlength="2147483647" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="true" style="overflow-x: hidden; overflow-wrap: break-word; height: 69px;" [ngClass]="{'ui-state-disabled' :selectedOption === 'accept'}"></textarea>
+                    </div>
+
+                       <button type="submit" class="ui-commandlink ui-widget btn btn-lg btn-styled float-right pull-right">
+                          <i class="fas fa-check mr-2"></i>Suivant
+                      </button>
+                    </form>
+
+
+                    <br><br>
+
+
+
+
+
+
+
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <br><br><br>
+</div>
+
+
+

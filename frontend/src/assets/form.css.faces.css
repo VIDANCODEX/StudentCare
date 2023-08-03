@@ -1,0 +1,43 @@
+
+label {
+    font-weight: 700;
+}
+
+body.sge-public #messagesRegion .ui-widget {
+    font-size: 13px !important;
+}
+
+body.sge-public .form-control:not(.sge-no-height), ul.ui-selectcheckboxmenu-multiple-container {
+    height: 34px;
+}
+
+.sge-public .ui-widget.btn-sm {
+    font-size: 0.875rem !important;
+}
+
+li.ui-autocomplete-input-token > input, .ui-autocomplete.form-control input, ui-selectcheckboxmenu.form-control input,
+.ui-selectcheckboxmenu .ui-selectcheckboxmenu-trigger {
+    height: 34px !important;
+}
+
+ul.ui-selectcheckboxmenu-multiple-container {
+    max-height: 120px;
+    overflow-y: auto;
+}
+
+/*.ui-selectcheckboxmenu.form-control ul {
+    min-height: 34px !important;
+}*/
+
+.ui-inputfield, .ui-widget-content .ui-inputfield, .ui-widget-header .ui-inputfield {
+    background: none rgba(218, 218, 218, 0.05) !important;
+}
+
+.ui-selectcheckboxmenu-multiple-container::-webkit-scrollbar-thumb {
+    border-radius: initial;
+}
+
+.ui-selectcheckboxmenu-multiple-container::-webkit-scrollbar {
+    width: auto;
+}
+

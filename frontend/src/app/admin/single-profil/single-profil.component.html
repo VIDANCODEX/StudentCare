@@ -1,0 +1,130 @@
+<app-header></app-header>
+<div class="main-container container" style="margin-top: 50px;">
+  <div class="page-title">
+    <h1 class="tracking-in-expand">Student Care</h1>
+  </div>
+
+    <div id="messagesRegion" aria-label="form feedback" aria-live="assertive" aria-relevant="additions">
+      <div id="form:messages">
+      </div>
+    </div>
+    <div class="container">
+      <div class="row" *ngFor="let StudentItem of StudentArray">
+        <div class="sge-user-profile-info col-lg-3 col-md-12 text-center">
+          <img class="media-object sge-user-photo rotate-vert-center" alt="Photo étudiant" src="../../../assets/male.jpg.faces.jpeg">
+          <div id="form:j_idt134" class="ui-outputpanel ui-widget text-center text-bold" style="font-size: 20px;">{{StudentItem.Nom }} {{StudentItem.Prenom }}</div>
+          <div id="form:j_idt136" class="ui-outputpanel ui-widget text-center">Code : {{StudentItem.id }}</div>
+        </div>
+        <div class="col-lg-9 col-md-12">
+          <h1 class="my-profile-section-h">Informations</h1>
+          <dl class="row">
+            <dt class="col-sm-3">E-mail :</dt>
+            <dd class="col-sm-9">{{StudentItem.email }}</dd>
+            <dt class="col-sm-3">Téléphones :</dt>
+            <dd class="col-sm-9">{{StudentItem.telephone }}</dd>
+            <dt class="col-sm-3">Adresse :</dt>
+            <dd class="col-sm-9">{{StudentItem.adresse }}</dd>
+
+
+            <dt class="col-sm-3">Date d'arrivée :</dt>
+            <dd class="col-sm-9">
+              <span *ngIf="!isEditingArrivee">{{ StudentItem.Arrivee | date: 'dd/MM/yyyy' }}</span>
+              <input *ngIf="isEditingArrivee" type="date" [(ngModel)]="Arrivee" name="arrivee" />
+              <button class="btn btn-secondary btn-sm" type="button" (click)="toggleDateEditing('Arrivee')">
+                {{ isEditingArrivee ? 'Cancel' : 'Edit' }}
+              </button>
+            </dd>
+
+            <dt class="col-sm-3">Délai :</dt>
+            <dd class="col-sm-9">
+              <span *ngIf="!isEditingDelai">{{ StudentItem.Delai | date: 'dd/MM/yyyy' }}</span>
+              <input *ngIf="isEditingDelai" type="date" [(ngModel)]="Delai" name="delai" />
+              <button class="btn btn-secondary btn-sm" type="button" (click)="toggleDateEditing('Delai')">
+                {{ isEditingDelai ? 'Cancel' : 'Edit' }}
+              </button>
+            </dd>
+            <dt class="col-sm-3">Nationalite :</dt>
+            <dd class="col-sm-9">{{StudentItem.Nationalite }}</dd>
+            <dt class="col-sm-3">Statut :</dt>
+            <dd class="col-sm-9">
+              <span *ngIf="!isEditingStatut">{{ StudentItem.Statut }}</span>
+              <select *ngIf="isEditingStatut" [(ngModel)]="selectedStatut" name="statut">
+                <option value="En Cours">En Cours</option>
+                <option value="Validé">Validé</option>
+                <option value="Attente">Attente</option>
+                <option value="Incomplet">Incomplet</option>
+              </select>
+              <button class="btn btn-secondary btn-sm" type="button" (click)="toggleStatutEditing()">
+                {{ isEditingStatut ? 'Cancel' : 'Edit' }}
+              </button>
+            </dd>
+
+            <button *ngIf="isEditingArrivee || isEditingDelai || isEditingStatut" class="btn btn-primary btn-sm" type="button" (click)="saveChanges()">
+              Save
+            </button>
+
+
+          </dl>
+
+
+
+          <h1 class="my-profile-section-h mt-4">Carte de séjour</h1><div id="form:j_idt171" class="ui-outputpanel ui-widget">
+          <table role="grid" style="table-layout: auto;">
+            <thead>
+            <tr role="row">
+              <th class="ui-state-default text-center" role="columnheader">
+                Télécharger
+              </th>
+              <th class="ui-state-default text-center" role="columnheader">
+                Etat
+              </th>
+            </tr>
+            </thead>
+            <tbody class="ui-datatable-data ui-widget-content">
+            <tr>
+              <td class="text-center"><span id="form:DownloadGrid"><button (click)="downloadFile(+id)" style="color: #c70000!important;">
+            <i class="fas fa-file-pdf mr-1"></i>Carte provisoire</button></span>
+              </td>
+              <td class="text-center">
+                <span *ngIf="StudentItem.Statut ==='Validé'" [ngClass]="'ml-2 badge badge-success'">
+            {{StudentItem.Statut }}</span>
+                <span *ngIf="StudentItem.Statut ==='En Cours'" [ngClass]="'ml-2 badge badge-warning'">
+            {{StudentItem.Statut }}</span>
+                <span *ngIf="StudentItem.Statut ==='Incomplet'" [ngClass]="'ml-2 badge badge-danger'">
+            {{StudentItem.Statut }}</span>
+                <span *ngIf="StudentItem.Statut ==='Attente'" [ngClass]="'ml-2 badge badge-secondary'">
+            {{StudentItem.Statut }}</span>
+              </td>
+            </tr>
+            </tbody>
+          </table></div>
+
+          <h1 class="my-profile-section-h mt-4">Commentaire</h1><div id="form:j_idt171" class="ui-outputpanel ui-widget">
+          <table role="grid" style="table-layout: auto;">
+            <thead>
+            <tr role="row">
+              <th >
+                Message
+              </th>
+
+            </tr>
+            </thead>
+            <tbody class="ui-datatable-data ui-widget-content">
+
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>{{StudentItem.Commentaire }}</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+            </tbody>
+          </table></div>
+
+        </div>
+        <div class="w-100"></div>
+      </div>
+    </div><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:7" value="6363279180741694526:1137487038613266825" autocomplete="off">
+</div>
