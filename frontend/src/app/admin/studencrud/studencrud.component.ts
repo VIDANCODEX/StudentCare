@@ -12,9 +12,50 @@ import {MyService} from "../../services/my-service.service";
 })
 export class StudencrudComponent implements OnInit{
   StudentArray : any[]=[];
+  listNationalite: string[] = [
+    "Algérien",
+    "Angolais",
+    "Béninois",
+    "Burkinabe",
+    "Burundais",
+    "Camerounais",
+    "Centrafricain",
+    "Comorien",
+    "Congolais",
+    "Djiboutien",
+    "Égyptien",
+    "Éthiopien",
+    "Gabonais",
+    "Gambien",
+    "Ghanéen",
+    "Guinéen",
+    "Ivoirien",
+    "Kényan",
+    "Libérien",
+    "Libyen",
+    "Malgache",
+    "Malien",
+    "Marocain",
+    "Mauritanien",
+    "Mauricien",
+    "Nigérien",
+    "Nigérian",
+    "Ougandais",
+    "Rwandais",
+    "Sénégalais",
+    "Seychellois",
+    "Sierra-Léonais",
+    "Somalien",
+    "Soudanais",
+    "Tanzanien",
+    "Tchadien",
+    "Togolais",
+    "Zambien",
+    "Zimbabwéen",
+  ];
 
 
-  //currentStudentID="";
+
   id: string="";
   Nationalite: string="";
   Arrivee: string="";

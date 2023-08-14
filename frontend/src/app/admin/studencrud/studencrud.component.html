@@ -3,8 +3,6 @@
   <div class="page-title">
     <h1 class="tracking-in-expand">Student Care</h1>
   </div>
-  <form id="form" name="form" method="post" action="https://myu.universitecentrale.net/sge/portal/myProfile.faces" enctype="multipart/form-data">
-    <input type="hidden" name="form" value="form">
 
     <div id="messagesRegion" aria-label="form feedback" aria-live="assertive" aria-relevant="additions">
       <div id="form:messages">
@@ -45,7 +43,11 @@
                     <label class=" ">Nationalite</label>
                   </div>
 
-                  <input type="text" formControlName="nationalite" placeholder="Nationalité">
+
+                  <select formControlName="nationalite">
+                    <option value="">Tout</option>
+                    <option *ngFor="let nationalite of listNationalite" [value]="nationalite">{{ nationalite }}</option>
+                  </select>
 
                 </div>
               </td>
