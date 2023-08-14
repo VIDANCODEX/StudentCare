@@ -1,19 +1,12 @@
 <app-user-header></app-user-header>
 
 <div class="main-container container" style="margin-top: 50px;">
-  <form id="j_idt254" name="j_idt254" method="post" action="https://myu.universitecentrale.net/sge/portal/cvEdit.faces" enctype="application/x-www-form-urlencoded">
-    <input type="hidden" name="j_idt254" value="j_idt254" wfd-invisible="true">
-    <input type="hidden" name="_cid" value="1c2" id="cid" wfd-invisible="true">
-    <input id="j_idt254:_cid" type="hidden" name="j_idt254:_cid" value="1c2" wfd-invisible="true">
-    <input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:7" value="-7533580966967624620:7942874645225388422" autocomplete="off" wfd-invisible="true">
-  </form>
 
   <div class="page-title">
     <h1 class="tracking-in-expand">Guide de la Carte Séjour</h1>
   </div>
 
-  <form id="form" name="form" method="post" action="https://myu.universitecentrale.net/sge/portal/cvEdit.faces" enctype="multipart/form-data">
-    <input type="hidden" name="form" value="form">
+
 
     <div id="messagesRegion" aria-label="form feedback" aria-live="assertive" aria-relevant="additions">
       <div id="form:messages">
@@ -24,22 +17,6 @@
 
     <div class="box dark qz-edit-box">
       <div id="div-1" class="body">
-
-        <input type="hidden" name="_cid" value="1c2" id="cid">
-        <table id="form:form_content" class="aria-role-presentation ">
-          <tbody>
-          <tr>
-            <td></td>
-          </tr>
-          </tbody>
-        </table>
-        <table id="form:rest-form-content" class="aria-role-presentation ">
-          <tbody>
-          <tr>
-            <td></td>
-          </tr>
-          </tbody>
-        </table>
 
         <div class="container-main">
           <div class="outer-wrapper">
@@ -203,14 +180,23 @@
             </label>
           </td>
         </tr>
+      <tr *ngIf="isChecked">
+          <td>
+            <label>
+              <input type="checkbox" id="form:itemCaseCocher_269:9">
+              1x copie de votre ancienne carte sejour définitive + L'original
+              </label>
+          </td>
+        </tr>
       </tbody>
     </table>
   </div>
 </div>
-
-
-
-
+   <p *ngIf="isChecked">
+       <u>NB:</u>
+     <span style="font-size: 13px; color: red ">&nbsp;1x changement d'adresse est nécessaire lorsque vous changer de zone &nbsp;</span>
+     <span title="A faire dans votre ancien poste de police" id="form:helptext_cv_job_title" class="sge-help-text-icon fas fa-question-circle" style=""></span>
+   </p>
 
                   </span>
                 </div>
@@ -230,7 +216,6 @@
       </tr>
       </tbody>
     </table>
-  </form>
   <br><br><br>
 </div>
 

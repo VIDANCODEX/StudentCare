@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {FormBuilder} from "@angular/forms";
+import {MyService} from "../../services/my-service.service";
 
 @Component({
   selector: 'app-single-profil',
@@ -11,7 +12,6 @@ import {FormBuilder} from "@angular/forms";
 export class SingleProfilComponent implements OnInit{
 
   StudentArray : any[]=[];
-  isResultLoaded =false;
   isEditingArrivee: boolean = false;
   isEditingDelai: boolean = false;
   originalArrivee: string = '';
@@ -22,7 +22,7 @@ export class SingleProfilComponent implements OnInit{
 
 
 
-  id: string="";
+  id: number=+this.route.snapshot.params['id'];
   Nationalite: string="";
   Arrivee: string="";
   Statut: string="";
@@ -31,7 +31,11 @@ export class SingleProfilComponent implements OnInit{
   originalStatut: string="";
 
 
-  constructor(private http: HttpClient,  private route: ActivatedRoute, private formBuilder: FormBuilder) {}
+  constructor(private http: HttpClient,
+              private route: ActivatedRoute,
+              private formBuilder: FormBuilder,
+              private service: MyService,
+              private router:Router) {}
   ngOnInit(): void {
 
     const idProfil= +this.route.snapshot.params['id'];
@@ -39,41 +43,57 @@ export class SingleProfilComponent implements OnInit{
 
   }
 
-  getOneStudent(test:number)
-  {
-    this.http.get("http://localhost:8085/api/student"+ "/"+ test)
-      .subscribe((resultData: any)=>
-      {
-        this.isResultLoaded = true;
-        console.log(resultData.data);
-        this.StudentArray = resultData.data;
-        if (this.StudentArray.length > 0) {
-          this.Arrivee = new Date(this.StudentArray[0].Arrivee).toISOString().split('T')[0];
-          this.Delai = new Date(this.StudentArray[0].Delai).toISOString().split('T')[0];}
-          this.Statut =this.StudentArray[0].Statut
-          this.id =this.StudentArray[0].id}
-  );
 
+
+  getOneStudent(userId:number){
+    this.service.getOneStudent(userId).subscribe(
+      (resultData: any)=>{
+        this.StudentArray = resultData.data;
+        this.Arrivee = new Date(this.StudentArray[0].Arrivee).toISOString().split('T')[0];
+        this.Delai = new Date(this.StudentArray[0].Delai).toISOString().split('T')[0];
+        this.Statut = this.StudentArray[0].Statut;
+        this.id = this.StudentArray[0].id
+      }
+    );
   }
 
 
-  UpdateRecords() {
-    const path = this.route.snapshot.params['id'];
-    let bodyData = {
+
+  updateStudent(userId: number) {
+    const updatedData = {
       "Arrivee": new Date(this.Arrivee).toISOString(),
       "Delai": new Date(this.Delai).toISOString(),
-      "Statut":this.Statut,
+      "Statut": this.Statut,
     };
-    console.log(bodyData);
 
-    this.http.put("http://localhost:8085/api/student/update" + "/" + path, bodyData).subscribe((resultData: any) => {
-      console.log(resultData);
-      alert("Student Registered Updateddd");
-    });
-
+    this.service.updateStudent(userId, updatedData).subscribe(
+      (resultData: any) => {
+        console.log(resultData);
+        console.log("Student Updateddd");
+        location.reload();
+      },
+      (error) => {
+        console.error("Error while updating student:", error);
+      }
+    );
   }
 
-
+  downloadFile() {
+    const userId = +this.route.snapshot.params['id'];
+    this.service.downloadFile(userId).subscribe(
+      (response: any) => {
+        const base64Data = response.base64Data;
+        const fileExtension = response.fileExtension;
+        const anchor = document.createElement('a');
+        anchor.href = `data:application/octet-stream;base64,${base64Data}`;
+        anchor.download = `carte_provisoire.${fileExtension}`;
+        anchor.click();
+      },
+      (error) => {
+        console.error("Error while downloading file:", error);
+      }
+    );
+  }
 
   toggleDateEditing(field: string) {
     if (field === 'Arrivee') {
@@ -110,7 +130,7 @@ export class SingleProfilComponent implements OnInit{
       this.Statut = this.selectedStatut;
     }
 
-    this.UpdateRecords();
+    this.updateStudent(this.id);
 
 
     this.isEditingArrivee = false;
@@ -131,21 +151,8 @@ export class SingleProfilComponent implements OnInit{
     }
   }
 
-  downloadFile(id: number) {
-    const apiUrl = `http://localhost:8085/api/downloadFile/${id}`;
-    this.http.get(apiUrl, { responseType: 'blob' }).subscribe((blob: Blob) => {
-      const downloadUrl = URL.createObjectURL(blob);
 
-      // Create a hidden <a> element and trigger a click event to start the download
-      const anchor = document.createElement('a');
-      anchor.href = downloadUrl;
-      anchor.download = 'carte_provisoire.pdf'; // Set the desired file name
-      anchor.click();
 
-      // Clean up the object URL after the download has started
-      URL.revokeObjectURL(downloadUrl);
-    });
-  }
 
 
 }

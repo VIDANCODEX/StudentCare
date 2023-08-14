@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
 import { HttpClient } from "@angular/common/http";
+import {MyService} from "../../services/my-service.service";
 
 @Component({
   selector: 'app-user-step5',
@@ -10,7 +11,8 @@ import { HttpClient } from "@angular/common/http";
 export class UserStep5Component implements OnInit {
   constructor(private route: ActivatedRoute,
               private http: HttpClient,
-              private router: Router) {
+              private router: Router,
+              private service: MyService) {
   }
   userFile!: File;
   userFileName!: string;
@@ -59,18 +61,24 @@ export class UserStep5Component implements OnInit {
   uploadFile(fileData: string) {
     return this.http.post<any>("http://localhost:8085/api/uploadFile", {
       fileData: fileData,
-      fileName: this.userFileName //
+      fileName: this.userFileName
     });
   }
 
-  uploadDateRappel() {
-    const path = this.route.snapshot.params['id'];
-    let bodyData = {
+
+  uploadDateRappel(){
+    const id = this.route.snapshot.params['id'];
+    let updatedData = {
       "dateRappel":this.dateRappel,
     };
-    this.http.put("http://localhost:8085/api/Rappel" + "/" + path, bodyData).subscribe((resultData: any) => {
-      console.log(resultData);
-    });
+    this.service.uploadDateRappel(id,updatedData).subscribe(
+      (resultData: any) =>{
+        console.log("Date mis à jour");
+      },
+      (error) =>{
+        console.error("Erreur de mis à jour de la date")
+      }
+    )
   }
 
   onNext() {

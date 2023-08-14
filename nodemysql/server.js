@@ -185,34 +185,37 @@ server.post("/api/uploadFile", (req, res) => {
     });
 });
 
-server.get("/api/downloadFile/:id", (req, res) => {
+server.get('/api/downloadFile/:id', (req, res) => {
     const userId = parseInt(req.params.id);
     const uploadDir = path.join(__dirname, 'uploads');
 
-    // Read all files in the 'uploads' directory
     fs.readdir(uploadDir, (err, files) => {
         if (err) {
             console.error(err);
             res.status(500).send({ status: false, message: "Erreur lors de la lecture du répertoire des fichiers" });
         } else {
-            // Filter out files that match the id
             const matchingFiles = files.filter(file => file.startsWith(userId + '.'));
 
             if (matchingFiles.length === 0) {
                 res.status(404).send({ status: false, message: "Fichier introuvable pour cet ID" });
             } else {
-                // Use the first matching file found
                 const fileName = matchingFiles[0];
-
-                // Set appropriate headers for the response
-                res.setHeader('Content-disposition', `attachment; filename=${fileName}`);
-                res.setHeader('Content-type', 'application/octet-stream');
-
-                // Create a read stream from the file path and pipe it to the response
                 const filePath = path.join(uploadDir, fileName);
-                const fileStream = fs.createReadStream(filePath);
-                fileStream.pipe(res);
+
+                fs.readFile(filePath, (err, fileContent) => {
+                    if (err) {
+                        console.error(err);
+                        res.status(500).send({ status: false, message: "Erreur lors de la lecture du fichier" });
+                    } else {
+                        const base64Data = fileContent.toString('base64');
+
+                        const fileExtension = path.extname(fileName).slice(1);
+
+                        res.send({ base64Data, fileExtension });
+                    }
+                });
             }
         }
     });
 });
+

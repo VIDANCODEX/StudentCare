@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {HttpClient} from "@angular/common/http";
+import {MyService} from "../../services/my-service.service";
 
 @Component({
   selector: 'app-user-step3',
@@ -13,7 +14,8 @@ export class UserStep3Component implements OnInit{
 
   constructor(private route:ActivatedRoute,
               private router:Router,
-              private http:HttpClient) {}
+              private http:HttpClient,
+              private service: MyService) {}
   ngOnInit() {
   }
 
@@ -27,23 +29,26 @@ export class UserStep3Component implements OnInit{
     if (this.selectedOption === 'accept') {
       this.router.navigateByUrl('/user/step4/' + this.userId);
     } else if (this.selectedOption === 'refuse') {
-      this.UpdateComment();
+      this.updateStudentComment();
       this.router.navigateByUrl('/user/step1/' + this.userId);
     }
   }
 
-  UpdateComment() {
-    const path = this.route.snapshot.params['id'];
-    let bodyData = {
-      "Commentaire":this.Commentaire,
+
+  updateStudentComment() {
+    const userId = +this.route.snapshot.params['id'];
+    const updatedData = {
+      "Commentaire": this.Commentaire
     };
-    console.log(bodyData);
-
-    this.http.put("http://localhost:8085/api/user/update" + "/" + path, bodyData).subscribe((resultData: any) => {
-      console.log(resultData);
-      alert("Student Commentaire Updateddd");
-    });
-
+    this.service.updateComment(userId, updatedData).subscribe(
+      (response: any) => {
+        console.log(response);
+        alert("Commentaire de l'étudiant mis à jour");
+      },
+      (error) => {
+        console.error("Error while updating comment:", error);
+      }
+    );
   }
 
 }

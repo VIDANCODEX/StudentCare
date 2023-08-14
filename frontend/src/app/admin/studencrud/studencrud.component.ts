@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Router} from "@angular/router";
 import {FormBuilder, FormGroup} from "@angular/forms";
+import {MyService} from "../../services/my-service.service";
 
 
 @Component({
@@ -11,7 +12,6 @@ import {FormBuilder, FormGroup} from "@angular/forms";
 })
 export class StudencrudComponent implements OnInit{
   StudentArray : any[]=[];
-  isResultLoaded =false;
 
 
   //currentStudentID="";
@@ -30,9 +30,9 @@ export class StudencrudComponent implements OnInit{
 
   constructor(private http: HttpClient,
               private router: Router,
-              private formBuilder: FormBuilder )
+              private formBuilder: FormBuilder,
+              private service: MyService)
   {
-    this.getAllStudent();
 
     this.filterForm = this.formBuilder.group({
       code: '',
@@ -44,29 +44,19 @@ export class StudencrudComponent implements OnInit{
   }
   ngOnInit(): void {
     this.getAllStudent();
-
-
   }
-  getAllStudent()
-  {
-    this.http.get("http://localhost:8085/api/student/")
-      .subscribe((resultData: any)=>
-      {
-        this.isResultLoaded = true;
-        console.log(resultData.data);
+
+  getAllStudent(){
+    this.service.getAllStudent().subscribe(
+      (resultData: any) =>{
         this.StudentArray = resultData.data;
         this.filteredStudentArray =resultData.data;
         this.totalPages = Math.ceil(this.filteredStudentArray.length / this.itemsPerPage)
-      });
+      }
+    );
   }
 
 
-
-
-  /*onViewProfilDetail(studentID: string) {
-    this.currentStudentID = studentID;
-    this.router.navigateByUrl('/admin/profil/' + this.currentStudentID);
-  }*/
 
   applyFilters() {
     const filters = this.filterForm.value;
