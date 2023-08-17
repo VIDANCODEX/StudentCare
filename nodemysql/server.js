@@ -219,3 +219,23 @@ server.get('/api/downloadFile/:id', (req, res) => {
     });
 });
 
+//On sauvegarde la progression
+server.put("/api/step/:id", (req, res) => {
+    const studentId = req.params.id;
+    const {step} = req.body;
+
+    const sql =
+        "UPDATE informations SET step=? WHERE id=?";
+
+    db.query(sql, [step, studentId], (error, result) => {
+        if (error) {
+            res.status(500).send({ status: false, message: "Echec lors de la sauvegarde " });
+        } else {
+            if (result.affectedRows === 0) {
+                res.status(404).send({ status: false, message: "ID introuvable" });
+            } else {
+                res.send({ status: true, message: "Progression enregistré" });
+            }
+        }
+    });
+});

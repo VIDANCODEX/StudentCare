@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
+import * as http from "http";
 
 @Injectable({
   providedIn: 'root'
@@ -39,6 +40,10 @@ export class MyService {
 
   getIsChecked(): boolean {
     return this.isChecked;
+  }
+
+  saveStep(id:number, data:any){
+    return this.http.put(`http://localhost:8085/api/step/${id}`, data);
   }
 
 }
