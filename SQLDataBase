@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 03 août 2023 à 18:30
+-- Généré le : jeu. 17 août 2023 à 17:05
 -- Version du serveur : 10.4.28-MariaDB
 -- Version de PHP : 8.2.4
 
@@ -39,37 +39,38 @@ CREATE TABLE `informations` (
   `telephone` varchar(50) DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
   `adresse` varchar(255) DEFAULT NULL,
-  `dateRappel` date DEFAULT NULL
+  `dateRappel` date DEFAULT NULL,
+  `step` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `informations`
 --
 
-INSERT INTO `informations` (`id`, `Nationalite`, `Nom`, `Prenom`, `Arrivee`, `Delai`, `Statut`, `Commentaire`, `telephone`, `email`, `adresse`, `dateRappel`) VALUES
-(149635, 'Ivoirien', 'Soko', 'Emmanuel', '2024-02-19', '2023-11-30', 'Incomplet', '', '51810463', 'e.soko0405@myu.universitecentrale.tn', '123, Avenue de la Gare', NULL),
-(179962, 'Tchadien', 'Barri', 'Ali', '2023-02-10', '2023-03-11', 'Incomplet', 'Test', '303645158', 'A.barri2203@myu.universitecentrale.tn', 'Tunis', NULL),
-(202123, 'Burkinabe', 'OUEDRAOGO', 'Kaled', '2029-02-08', '2011-11-07', 'Validé', 'test2', '0123456789', 'g.ouedraogo0209@myu.universitecentrale.tn', 'Carthage', '2023-01-04'),
-(209962, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-08', '2023-03-09', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL),
-(379962, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL),
-(409962, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL),
-(412062, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL),
-(412162, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL),
-(415562, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL),
-(415762, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL),
-(415862, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL),
-(416662, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL),
-(419962, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL),
-(419977, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL),
-(419987, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL),
-(429962, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL),
-(431962, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL),
-(432962, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL),
-(436462, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL),
-(679962, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL),
-(697452, 'Camerounais', 'Sekou', 'Ousmane', '2023-04-11', '2023-01-05', 'Attente', '', '58715463', 'o.sekou0811@myu.universitecentrale.tn', 'Cite El Khadra', NULL),
-(789641, 'Malien', 'Kone', 'Aziz', '2023-07-26', '2023-09-20', 'Validé', '', '51895463', 'a.kone0409@myu.universitecentrale.tn', '123, Avenue de la Gare', NULL),
-(879961, 'Nigerien', 'Konate', 'Aziz', '2022-02-10', '2022-03-11', 'Attente', 'Test', '203645177', 'a.konate1009@myu.universitecentrale.tn', 'Tunis', NULL);
+INSERT INTO `informations` (`id`, `Nationalite`, `Nom`, `Prenom`, `Arrivee`, `Delai`, `Statut`, `Commentaire`, `telephone`, `email`, `adresse`, `dateRappel`, `step`) VALUES
+(149635, 'Ivoirien', 'Soko', 'Emmanuel', '2024-02-18', '2023-11-29', 'Incomplet', '', '51810463', 'e.soko0405@myu.universitecentrale.tn', '123, Avenue de la Gare', '2023-08-01', NULL),
+(179962, 'Tchadien', 'Barri', 'Ali', '2023-02-10', '2023-03-11', 'Incomplet', 'Test', '303645158', 'A.barri2203@myu.universitecentrale.tn', 'Tunis', NULL, NULL),
+(202123, 'Burkinabe', 'OUEDRAOGO', 'Kaled', '2029-02-07', '2014-07-23', 'Attente', 'azerty test', '0123456789', 'g.ouedraogo0209@myu.universitecentrale.tn', 'Carthage', '2023-08-19', NULL),
+(209962, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-07', '2023-03-01', 'Attente', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, NULL),
+(379962, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, NULL),
+(409962, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, NULL),
+(412062, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, NULL),
+(412162, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, NULL),
+(415562, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, NULL),
+(415762, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, NULL),
+(415862, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, NULL),
+(416662, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, NULL),
+(419962, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, NULL),
+(419977, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, NULL),
+(419987, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, NULL),
+(429962, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, NULL),
+(431962, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, NULL),
+(432962, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, NULL),
+(436462, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, NULL),
+(679962, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, NULL),
+(697452, 'Camerounais', 'Sekou', 'Ousmane', '2023-04-11', '2023-01-05', 'Attente', '', '58715463', 'o.sekou0811@myu.universitecentrale.tn', 'Cite El Khadra', NULL, NULL),
+(789641, 'Malien', 'Kone', 'Aziz', '2023-07-26', '2023-09-20', 'Validé', '', '51895463', 'a.kone0409@myu.universitecentrale.tn', '123, Avenue de la Gare', NULL, NULL),
+(879961, 'Nigerien', 'Konate', 'Aziz', '2022-02-10', '2022-03-11', 'Attente', 'Test', '203645177', 'a.konate1009@myu.universitecentrale.tn', 'Tunis', NULL, NULL);
 
 --
 -- Index pour les tables déchargées
@@ -86,4 +87,3 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-

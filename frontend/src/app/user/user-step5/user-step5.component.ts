@@ -17,10 +17,12 @@ export class UserStep5Component implements OnInit {
   userFile!: File;
   userFileName!: string;
   dateRappel!: string;
+  userId!:number;
   ngOnInit() {
+    this.userId = +this.route.snapshot.params['id'];
+    this.updateStep();
   }
 
-  userId = +this.route.snapshot.params['id'];
 
   onFileSelected(event: any) {
     const file: File = event.target.files[0];
@@ -85,4 +87,21 @@ export class UserStep5Component implements OnInit {
     this.convertFileToBase64(this.userFile);
     this.router.navigateByUrl('/user/step6/' + this.userId);
   }
+
+  updateStep(){
+    const data = {
+      "step": "step5",
+    };
+    this.service.saveStep(this.userId,data).subscribe(
+      (resultData:any)=>{
+        console.log(resultData);
+        console.log("Operation reussie");
+      },
+      (error)=>{
+        console.error("Erreur lors de la sauvegarde",error);
+      }
+    )
+  }
+
+
 }

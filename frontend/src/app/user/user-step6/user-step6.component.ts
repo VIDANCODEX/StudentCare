@@ -14,16 +14,16 @@ export class UserStep6Component implements OnInit {
               private service: MyService) {
   }
 
-
   ngOnInit() {
-    const userId = +this.route.snapshot.params['id'];
-    this.getOneStudent(userId);
+    this.userId = +this.route.snapshot.params['id'];
+    this.getOneStudent(this.userId);
+    this.updateStep();
   }
 
 
   Student: any[] = [];
   Statut: string = "";
-  userId = +this.route.snapshot.params['id'];
+  userId !:number;
 
 
   getOneStudent(userId:number){
@@ -33,5 +33,20 @@ export class UserStep6Component implements OnInit {
         this.Statut = this.Student[0].Statut;
       }
     );
+  }
+
+  updateStep(){
+    const data = {
+      "step": "step6",
+    };
+    this.service.saveStep(this.userId,data).subscribe(
+      (resultData:any)=>{
+        console.log(resultData);
+        console.log("Operation reussie");
+      },
+      (error)=>{
+        console.error("Erreur lors de la sauvegarde",error);
+      }
+    )
   }
 }

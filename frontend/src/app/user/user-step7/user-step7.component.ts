@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 import { HttpClient } from "@angular/common/http";
+import {MyService} from "../../services/my-service.service";
 
 @Component({
   selector: 'app-user-step7',
@@ -8,15 +9,18 @@ import { HttpClient } from "@angular/common/http";
   styleUrls: ['./user-step7.component.scss']
 })
 export class UserStep7Component implements OnInit {
-  constructor(private route: ActivatedRoute, private http: HttpClient) {}
+  constructor(private route: ActivatedRoute,
+              private http: HttpClient,
+              private service:MyService) {}
   Student: any[] = [];
   dateRappel: string = "";
   displayDate: string = "";
-  userId = +this.route.snapshot.params['id'];
+  userId !:number;
 
   ngOnInit() {
-    const userId = +this.route.snapshot.params['id'];
-    this.getOneStudent(userId);
+    this.userId = +this.route.snapshot.params['id'];
+    this.getOneStudent(this.userId);
+    this.updateStep();
   }
 
   getOneStudent(test: number) {
@@ -43,5 +47,20 @@ export class UserStep7Component implements OnInit {
     } else {
       this.displayDate = '0';
     }
+  }
+
+  updateStep(){
+    const data = {
+      "step": "step7",
+    };
+    this.service.saveStep(this.userId,data).subscribe(
+      (resultData:any)=>{
+        console.log(resultData);
+        console.log("Operation reussie");
+      },
+      (error)=>{
+        console.error("Erreur lors de la sauvegarde",error);
+      }
+    )
   }
 }

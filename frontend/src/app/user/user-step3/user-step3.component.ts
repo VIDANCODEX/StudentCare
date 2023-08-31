@@ -11,15 +11,18 @@ import {MyService} from "../../services/my-service.service";
 export class UserStep3Component implements OnInit{
   selectedOption!: string;
   Commentaire!: string;
+  userId!:number;
 
   constructor(private route:ActivatedRoute,
               private router:Router,
               private http:HttpClient,
               private service: MyService) {}
   ngOnInit() {
+    this.userId = +this.route.snapshot.params['id'];
+    this.updateStep()
   }
 
-  userId = +this.route.snapshot.params['id'];
+
 
   onOptionSelected(option: string) {
     this.selectedOption = option;
@@ -50,6 +53,19 @@ export class UserStep3Component implements OnInit{
       }
     );
   }
+  updateStep(){
+    const data = {
+      "step": "step3",
+    };
+    this.service.saveStep(this.userId,data).subscribe(
+      (resultData:any)=>{
+        console.log(resultData);
+        console.log("Operation reussie");
+      },
+      (error)=>{
+        console.error("Erreur lors de la sauvegarde",error);
+      }
+    )
+  }
 
 }
-

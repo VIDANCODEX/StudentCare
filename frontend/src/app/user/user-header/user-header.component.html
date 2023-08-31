@@ -5,3 +5,37 @@
     <a href="user/step1/:id" routerLinkActive="active">Step</a>
   </nav>
 </header>
+<br>
+<br><br>
+
+<div id="form:j_idt157" class="ui-datatable ui-widget"><div class="ui-datatable-tablewrapper">
+
+
+
+
+
+  <table role="grid" style="table-layout: auto;width: 1000px;" align="center">
+    <thead id="form:j_idt157_head"><tr role="row"><th id="form:j_idt157:j_idt158" class="ui-state-default" role="columnheader" aria-label="Année" scope="col"><span class="ui-column-title">Code </span></th>
+      <th id="form:j_idt157:j_idt160" class="ui-state-default" role="columnheader" aria-label="Niveau/Spécialité" scope="col"><span class="ui-column-title">Nom</span></th>
+      <th id="form:j_idt157:j_idt162" class="ui-state-default" role="columnheader" aria-label="Classe" scope="col"><span class="ui-column-title">Prenom</span></th>
+      <th id="form:j_idt157:j_idt162" class="ui-state-default" role="columnheader" aria-label="Classe" scope="col"><span class="ui-column-title">Nationalité</span></th></tr>
+    </thead><tbody id="form:j_idt157_data" class="ui-datatable-data ui-widget-content">
+
+  <ng-container *ngFor="let StudentItem of StudentArray">
+    <tr data-ri="0" class="ui-widget-content ui-datatable-even" role="row">
+      <td role="gridcell">
+        <a [routerLink]="['/user/'+StudentItem.step, StudentItem.id]">
+        {{ StudentItem.id }}
+        </a>
+      </td>
+
+      <td role="gridcell">{{StudentItem.Nom }}</td>
+      <td role="gridcell">{{StudentItem.Prenom }}</td>
+      <td role="gridcell">{{StudentItem.Nationalite }}</td>
+
+    </tr>
+  </ng-container>
+  </tbody></table>
+
+
+</div></div>

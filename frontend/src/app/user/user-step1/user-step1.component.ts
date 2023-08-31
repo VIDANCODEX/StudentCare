@@ -14,11 +14,27 @@ export class UserStep1Component implements OnInit {
 
   ngOnInit() {
     this.userId = +this.route.snapshot.params['id'];
+    this.updateStep();
   }
 
   updateIsChecked(value: boolean) {
     this.isChecked = value;
     this.service.setIsChecked(value);
+  }
+
+  updateStep(){
+    const data = {
+      "step": "step1",
+    };
+    this.service.saveStep(this.userId,data).subscribe(
+      (resultData:any)=>{
+        console.log(resultData);
+        console.log("Operation reussie");
+      },
+      (error)=>{
+        console.error("Erreur lors de la sauvegarde",error);
+      }
+    )
   }
 
 
