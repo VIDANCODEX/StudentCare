@@ -21,6 +21,7 @@ import { UserStep5Component } from './user/user-step5/user-step5.component';
 import { UserStep6Component } from './user/user-step6/user-step6.component';
 import { UserStep7Component } from './user/user-step7/user-step7.component';
 import { UserStep8Component } from './user/user-step8/user-step8.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { UserStep8Component } from './user/user-step8/user-step8.component';
     UserStep6Component,
     UserStep7Component,
     UserStep8Component,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
