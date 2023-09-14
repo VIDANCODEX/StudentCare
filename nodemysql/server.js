@@ -239,3 +239,26 @@ server.put("/api/step/:id", (req, res) => {
         }
     });
 });
+
+
+
+//////// Loggin 
+server.post('/api/login', (req, res) => {
+    const { email, password } = req.body;
+    const query = 'SELECT id FROM informations WHERE email = ? AND password = ?';
+  
+    db.query(query, [email, password], (err, results) => {
+      if (err) {
+        console.error('Database query error: ' + err.stack);
+        res.json({ success: false, message: 'Internal server error' });
+        return;
+      }
+  
+      if (results.length === 1) {
+        const userId = results[0].id;
+        res.json({ success: true, message: 'Login successful' , userId});
+      } else {
+        res.json({ success: false, message: 'Invalid credentials' });
+      }
+    });
+  });

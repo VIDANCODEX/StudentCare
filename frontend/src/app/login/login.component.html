@@ -5,7 +5,7 @@
         <hr class="style-5" />
         <div class="style-6">
             <div class="style-7">
-                <form name="form" method="post" action="" enctype="multipart/form-data; charset=utf-8" class="style-8">
+                <form (ngSubmit)="onSubmit()" name="form" method="post" action="" class="style-8">
                     <input type="hidden" name="form" value="form" class="style-9" />
                     <p class="style-10">
                         Veuillez saisir votre login et mot de passe
@@ -13,18 +13,18 @@
                     <div class="style-11">
                     </div>
                     <div class="style-12">
-                        <span class="style-13"><i class="fa fa-user"></i></span><input type="text" name="username" class="style-15" aria-describedby="user-addon" placeholder="Identifiant" />
+                        <span class="style-13"><i class="fa fa-user"></i></span><input type="email" id="email" name="email" [(ngModel)]="user.email" class="style-15" aria-describedby="user-addon" placeholder="Identifiant" required/>
                     </div>
                     <div class="style-16">
-                        <span class="style-17"><i class="fa fa-lock"></i></span><input type="password" name="password" value="" class="style-19" aria-describedby="password-addon" placeholder="Mot de passe" />
+                        <span class="style-17"><i class="fa fa-lock"></i></span><input type="password" id="password" name="password" [(ngModel)]="user.password" class="style-19" aria-describedby="password-addon" placeholder="Mot de passe" required/>
                     </div><button name="login" class="style-20"><span class="style-21">Connexion</span></button>
-                    <div class="style-22"></div><input type="hidden" name="" value="-5525242908641036168:8328026651671928446" autocomplete="off" class="style-23" />
+                    <div class="style-22"></div><input type="hidden" name="" autocomplete="off" class="style-23" />
                 </form>
             </div>
             <div class="style-24">
                 <div class="style-25">
                 </div>
-                <form name="form2" method="post" action="" enctype="multipart/form-data; charset=utf-8" class="style-26">
+                <form name="form2" method="post" action="" class="style-26">
                     <input type="hidden" name="form2" value="form2" class="style-27" />
                     <p class="style-28">Veuillez saisir votre login</p>
                     <div class="style-29">
