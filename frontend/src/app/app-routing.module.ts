@@ -12,22 +12,24 @@ import {UserStep5Component} from "./user/user-step5/user-step5.component";
 import {UserStep6Component} from "./user/user-step6/user-step6.component";
 import {UserStep7Component} from "./user/user-step7/user-step7.component";
 import {UserStep8Component} from "./user/user-step8/user-step8.component";
+import {LoginComponent} from "./login/login.component";
 
 
 const routes: Routes = [
+  { path: 'login', component: LoginComponent },
   { path: 'admin/profil/:id', component: SingleProfilComponent },
   { path: 'admin/profil', component: StudencrudComponent },
   { path: 'admin', component: HeaderComponent},
   { path: 'user', component: UserHeaderComponent},
   { path: 'user/profil', component: UserHeaderComponent},
-  { path: 'user/step1/:id', component: UserStep1Component},
-  { path: 'user/step2/:id', component: UserStep2Component},
-  { path: 'user/step3/:id', component: UserStep3Component},
-  { path: 'user/step4/:id', component: UserStep4Component},
-  { path: 'user/step5/:id', component: UserStep5Component},
-  { path: 'user/step6/:id', component: UserStep6Component},
-  { path: 'user/step7/:id', component: UserStep7Component},
-  { path: 'user/step8/:id', component: UserStep8Component}
+  { path: 'user/${loggedStudentId}/step1', component: UserStep1Component},
+  { path: 'user/${loggedStudentId}/step2', component: UserStep2Component},
+  { path: 'user/${loggedStudentId}/step3', component: UserStep3Component},
+  { path: 'user/${loggedStudentId}/step4', component: UserStep4Component},
+  { path: 'user/${loggedStudentId}/step5', component: UserStep5Component},
+  { path: 'user/${loggedStudentId}/step6', component: UserStep6Component},
+  { path: 'user/${loggedStudentId}/step7', component: UserStep7Component},
+  { path: 'user/${loggedStudentId}/step8', component: UserStep8Component}
 ];
 
 @NgModule({

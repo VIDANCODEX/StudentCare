@@ -22,6 +22,7 @@ import { UserStep6Component } from './user/user-step6/user-step6.component';
 import { UserStep7Component } from './user/user-step7/user-step7.component';
 import { UserStep8Component } from './user/user-step8/user-step8.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     UserStep7Component,
     UserStep8Component,
     NavbarComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

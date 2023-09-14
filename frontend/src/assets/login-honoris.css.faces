@@ -1,0 +1,83 @@
+/* BEGIN LOGIN PAGE HONORIS */
+.login {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  /*background: url("/sge/javax.faces.resource/lib/metis/img/pattern/irongrip.png.faces") repeat #444444;*/
+  background: url("/sge/javax.faces.resource/lib/metis/img/pattern/login-cover.png.faces");
+  background-size: cover;
+}
+.login .form-signin {
+    max-width: 600px;
+    padding: 40px;
+    margin: 0 auto;
+    /*background-color: rgba(60, 74, 79, 0.62);*/
+    background-color: #6f1426;
+    border-radius: 3px;
+    color: #fff;
+}
+.login .form-signin .form-signin-heading,
+.login .form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.login .form-signin .checkbox {
+  font-weight: normal;
+}
+.login .form-signin input[type="text"],
+.login .form-signin input[type="password"],
+.login .form-signin input[type="email"] {
+  /*position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  margin-bottom: 10px;*/
+  height: 46.4px;
+}
+.login .form-signin input[type="text"]:focus,
+.login .form-signin input[type="password"]:focus,
+.login .form-signin input[type="email"]:focus {
+  z-index: 2;
+}
+.login .form-signin input.top {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.login .form-signin input.middle {
+  margin-bottom: -1px;
+  border-radius: 0;
+}
+.login .form-signin input.bottom {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.login .input-group-addon i {
+    color: rgb(111 20 38 / 50%);
+}
+
+.btn-login {
+/*    color: #fff!important;
+    background-color: #135567!important;
+    border-color: #006a86!important;*/
+    color: #000!important;
+    background-color: #f7f7f7!important;
+    border-color: #ffffff!important;
+    background-image: none!important;
+}
+
+.btn-login:hover {
+/*    background-color: #003544 !important;
+    border-color: #003544 !important;*/
+    background-color: #c3808e !important;
+    border-color: #c3808e !important;
+    color: white !important;
+}
+
+.login-title {
+    font-size: 20px;
+    color: #e3e3e3;
+}
+
+.login_logo {
+    width: 160px;
+}
