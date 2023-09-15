@@ -22,14 +22,14 @@ const routes: Routes = [
   { path: 'admin', component: HeaderComponent},
   { path: 'user', component: UserHeaderComponent},
   { path: 'user/profil', component: UserHeaderComponent},
-  { path: 'user/${loggedStudentId}/step1', component: UserStep1Component},
-  { path: 'user/${loggedStudentId}/step2', component: UserStep2Component},
-  { path: 'user/${loggedStudentId}/step3', component: UserStep3Component},
-  { path: 'user/${loggedStudentId}/step4', component: UserStep4Component},
-  { path: 'user/${loggedStudentId}/step5', component: UserStep5Component},
-  { path: 'user/${loggedStudentId}/step6', component: UserStep6Component},
-  { path: 'user/${loggedStudentId}/step7', component: UserStep7Component},
-  { path: 'user/${loggedStudentId}/step8', component: UserStep8Component}
+  { path: 'user/:id/step1', component: UserStep1Component},
+  { path: 'user/:id/step2', component: UserStep2Component},
+  { path: 'user/:id/step3', component: UserStep3Component},
+  { path: 'user/:id/step4', component: UserStep4Component},
+  { path: 'user/:id/step5', component: UserStep5Component},
+  { path: 'user/:id/step6', component: UserStep6Component},
+  { path: 'user/:id/step7', component: UserStep7Component},
+  { path: 'user/:id/step8', component: UserStep8Component}
 ];
 
 @NgModule({
