@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { StudencrudComponent } from './admin/studencrud/studencrud.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
@@ -21,8 +20,10 @@ import { UserStep5Component } from './user/user-step5/user-step5.component';
 import { UserStep6Component } from './user/user-step6/user-step6.component';
 import { UserStep7Component } from './user/user-step7/user-step7.component';
 import { UserStep8Component } from './user/user-step8/user-step8.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
+import { AcceuilComponent } from './acceuil/acceuil.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -43,6 +44,8 @@ import { LoginComponent } from './login/login.component';
     UserStep8Component,
     NavbarComponent,
     LoginComponent,
+    AcceuilComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

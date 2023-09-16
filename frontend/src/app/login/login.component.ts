@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   user = {
     id: '',
+    step: '',
     email: '',
     password: ''
   };
@@ -21,17 +22,23 @@ export class LoginComponent {
 
   onSubmit() {
     this.muyService.login(this.user).subscribe(
-    (response)=>{
-      console.log(response);
-      this.router.navigate([`/user`]);
-
-    },
-      (error)=>{
-        console.log(error);
-        this.router.navigate([`/login`]);
-    }
-  );
-    
+      (response) => {
+        console.log(response);
+        if (response.success && response.userId) {
+          const userId = response.userId;
+          const userStep = response.userStep;
+          this.router.navigate([`/acceuil/${userId}`]);
+        } else {
+          console.log('Login failed or user ID not provided.');
+        }
+      },
+      (error) => {
+        console.log("tessssst",error);
+        this.router.navigate(['/login']);
+      }
+    );
+  
+  
   /*
   this.http.post('/api/login', this.user)
       .subscribe((response: any) => {

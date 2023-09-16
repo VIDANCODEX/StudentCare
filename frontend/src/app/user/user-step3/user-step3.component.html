@@ -1,4 +1,4 @@
-
+<app-navbar></app-navbar>
 <div class="main-container container" style="margin-top: 50px;">
   <input type="hidden" name="j_idt254" value="j_idt254" wfd-invisible="true">
     <input type="hidden" name="_cid" value="1c2" id="cid" wfd-invisible="true">
@@ -102,7 +102,7 @@
                   <span class="flex-grow-1">
                     <span style="font-size:20px;"><strong>L'Acceptation du Dossier</strong></span>
                     <hr>
-                    Si vous n’êtes pas soumis à la condition d’une demande de visa pour entrer en Tunisie, vous bénéficiez de 3 mois de séjour, à partir de la date d’arrivée. Si vous êtes soumis à la condition d’un visa, commencez par vérifier la durée de séjour qui vous a été accordée.
+                    Si vous n'êtes pas soumis à la condition d'une demande de visa pour entrer en Tunisie, vous bénéficiez de 3 mois de séjour, à partir de la date d’arrivée. Si vous êtes soumis à la condition d’un visa, commencez par vérifier la durée de séjour qui vous a été accordée.
                     <br>
                     <br>
                     Quel est le statut de votre demande de carte de séjour au poste de police :
@@ -116,8 +116,8 @@
                       <label for="option2" class="radio-button">Refusé</label>
                       <br><br>
 
-                      <div id="form:j_idt222" class="ui-outputpanel ui-widget form-group " style="">
-                      <div id="form:j_idt223" class="ui-outputpanel ui-widget form-control-placeholder" style="">
+                      <div id="form:j_idt222" class="ui-outputpanel ui-widget form-group " >
+                      <div id="form:j_idt223" class="ui-outputpanel ui-widget form-control-placeholder">
                             <label for="form:comment" class=" ">Si refusé,pourquoi ?</label>
                       </div>
                       <textarea [(ngModel)]="Commentaire" id="form:comment" name="form:comment" class="ui-inputfield ui-inputtextarea ui-widget ui-state-default ui-corner-all ui-inputtextarea-resizable" cols="37" rows="3" placeholder="Ecrire un commentaire ..." maxlength="2147483647" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="true" style="overflow-x: hidden; overflow-wrap: break-word; height: 69px;" [ngClass]="{'ui-state-disabled' :selectedOption === 'accept'}"></textarea>

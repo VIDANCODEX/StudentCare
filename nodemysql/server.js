@@ -243,9 +243,9 @@ server.put("/api/step/:id", (req, res) => {
 
 
 //////// Loggin 
-server.post('/api/login', (req, res) => {
+server.post('/api/login', (req, res, userId, userStep) => {
     const { email, password } = req.body;
-    const query = 'SELECT id FROM informations WHERE email = ? AND password = ?';
+    const query = 'SELECT id,step FROM informations WHERE email = ? AND password = ?';
   
     db.query(query, [email, password], (err, results) => {
       if (err) {
@@ -256,7 +256,8 @@ server.post('/api/login', (req, res) => {
   
       if (results.length === 1) {
         const userId = results[0].id;
-        res.json({ success: true, message: 'Login successful' , userId});
+        const userStep = results[0].step;
+        res.json({ success: true, message: 'Login successful' , userId, userStep});
       } else {
         res.json({ success: false, message: 'Invalid credentials' });
       }

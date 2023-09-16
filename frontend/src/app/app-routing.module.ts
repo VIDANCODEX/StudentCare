@@ -13,10 +13,12 @@ import {UserStep6Component} from "./user/user-step6/user-step6.component";
 import {UserStep7Component} from "./user/user-step7/user-step7.component";
 import {UserStep8Component} from "./user/user-step8/user-step8.component";
 import {LoginComponent} from "./login/login.component";
+import { AcceuilComponent } from "./acceuil/acceuil.component";
 
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
+  { path: 'acceuil', component: AcceuilComponent },
   { path: 'admin/profil/:id', component: SingleProfilComponent },
   { path: 'admin/profil', component: StudencrudComponent },
   { path: 'admin', component: HeaderComponent},
