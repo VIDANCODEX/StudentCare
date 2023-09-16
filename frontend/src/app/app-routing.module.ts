@@ -18,7 +18,7 @@ import { AcceuilComponent } from "./acceuil/acceuil.component";
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'acceuil', component: AcceuilComponent },
+  { path: 'acceuil/:id', component: AcceuilComponent },
   { path: 'admin/profil/:id', component: SingleProfilComponent },
   { path: 'admin/profil', component: StudencrudComponent },
   { path: 'admin', component: HeaderComponent},

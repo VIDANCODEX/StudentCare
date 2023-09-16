@@ -50,5 +50,4 @@ export class MyService {
     return this.http.post('http://localhost:8085/api/login', credantiels);
   }
 
-
 }
