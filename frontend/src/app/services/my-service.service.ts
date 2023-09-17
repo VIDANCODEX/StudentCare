@@ -50,4 +50,8 @@ export class MyService {
     return this.http.post('http://localhost:8085/api/login', credantiels);
   }
 
+
+  actualites(actualites:any):Observable<any>{
+    return this.http.get('http://localhost:4200/api/actualites')
+  }
 }

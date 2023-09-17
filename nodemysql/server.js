@@ -262,3 +262,27 @@ server.post('/api/login', (req, res, userId) => {
       }
     });
   });
+
+
+
+
+
+  //actualiteee
+  server.get('/api/actualites', (req, res) => {
+    db.query('SELECT * FROM actualities', (err, results) => {
+      if (err) {
+        throw err;
+      }
+      res.json(results);
+    });
+  });
+
+  server.get('/api/actualites/:id', (req, res) => {
+    const userId = parseInt(req.params.id);
+    db.query('SELECT titre, description, image_url, date_publication FROM actualities WHERE id = ?', [userId], (err, results) => {
+      if (err) {
+        throw err;
+      }
+      res.json(results[0]); // Assuming there is only one result for the provided ID
+    });
+  });

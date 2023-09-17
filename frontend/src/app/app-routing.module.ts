@@ -14,9 +14,14 @@ import {UserStep7Component} from "./user/user-step7/user-step7.component";
 import {UserStep8Component} from "./user/user-step8/user-step8.component";
 import {LoginComponent} from "./login/login.component";
 import { AcceuilComponent } from "./acceuil/acceuil.component";
+import { ActualitesComponent } from "./actualites/actualites.component";
+import { PostComponent } from './post/post.component';
 
 
 const routes: Routes = [
+  { path: 'actualites', component: ActualitesComponent },
+  { path: 'actualites/:id', component: PostComponent }, // Add the route for detailed post
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'acceuil/:id', component: AcceuilComponent },
   { path: 'admin/profil/:id', component: SingleProfilComponent },

@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { DatePipe } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { StudencrudComponent } from './admin/studencrud/studencrud.component';
@@ -24,6 +25,8 @@ import { LoginComponent } from './login/login.component';
 import { AcceuilComponent } from './acceuil/acceuil.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { ActualitesComponent } from './actualites/actualites.component';
+import { PostComponent } from './post/post.component';
 
 
 @NgModule({
@@ -46,6 +49,8 @@ import { FooterComponent } from './footer/footer.component';
     LoginComponent,
     AcceuilComponent,
     FooterComponent,
+    ActualitesComponent,
+    PostComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,7 +63,7 @@ import { FooterComponent } from './footer/footer.component';
     BrowserAnimationsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
