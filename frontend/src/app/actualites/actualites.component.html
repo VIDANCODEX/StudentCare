@@ -1,26 +1,22 @@
 <app-navbar></app-navbar>
 <div class="main-container container" style="margin-top: 50px;">
-
   <div class="page-title">
     <h1 class="tracking-in-expand">Actualités</h1>
   </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4" *ngFor="let actualite of actualites">
-        <div class="card">
-          <img [src]="actualite.image_url" class="card-img-top" alt="Image de l'actualité">
-          <div class="card-body">
-            <h5 class="card-title">{{ actualite.titre }}</h5>
-            <p class="card-text"><small class="text-muted"><i class="fa fa-edit mr-1"></i>{{ actualite.date_publication }}</small></p>
-            <p class="card-text">{{ actualite.description }}</p>
-            <button (click)="redirectToPost(actualite.id_actu)">LIRE L'ACTUALITÉ</button>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let actualite of actualites">
+        <div class="news-thumb hovereffect">
+          <img [src]="actualite.image_url" alt="Image de l'actualité" style="max-width: 100%;">
+          <div class="overlay">
+            <a class="info" (click)="redirectToPost(actualite.id_actu)">Lire l'actualité</a>
           </div>
         </div>
+      <div class="card-body">
+        <h2 style="font-weight: 500;" class="card-title">{{ actualite.titre }}</h2>
+        <h3 class="card-text"><small class="text-muted"><i class="fa fa-edit mr-1"></i>{{ actualite.date_publication }}</small></h3>
+        <h3 class="card-text">{{ actualite.description_c }}</h3>
       </div>
     </div>
   </div>
-
 </div>
-
 <app-footer></app-footer>

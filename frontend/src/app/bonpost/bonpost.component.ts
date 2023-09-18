@@ -6,16 +6,18 @@ import { DatePipe } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-post',
-  templateUrl: './post.component.html',
-  styleUrls: ['./post.component.scss']
+  selector: 'app-bonpost',
+  templateUrl: './bonpost.component.html',
+  styleUrls: ['./bonpost.component.scss']
 })
-export class PostComponent {
-  actualite = {
-    id_actu:'',
+export class BonpostComponent {
+  bonplan = {
+    id_bon:'',
     titre:'',
+    categorie:'',
     description_c:'',
     description_l:'',
+    evaluation:'',
     image_url:'',
     date_publication:''
   }
@@ -27,13 +29,15 @@ export class PostComponent {
   ngOnInit() {
     const postId = this.route.snapshot.paramMap.get('id'); // Get the post ID from the URL
     
-    this.http.get<any>(`http://localhost:8085/api/actualites/${postId}`).subscribe(
+    this.http.get<any>(`http://localhost:8085/api/bonplan/${postId}`).subscribe(
       (data) => {
-        this.actualite = {
-          id_actu: data.id_actu,
+        this.bonplan = {
+          id_bon: data.id_actu,
           titre: data.titre,
+          categorie: data.categorie,
           description_c: data.description_c,
           description_l: data.description_l,
+          evaluation: data.evaluation,
           image_url: data.image_url,
           date_publication: this.formatDate(data.date_publication),
         };

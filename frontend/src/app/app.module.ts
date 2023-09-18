@@ -27,6 +27,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ActualitesComponent } from './actualites/actualites.component';
 import { PostComponent } from './post/post.component';
+import { BonPlanComponent } from './bon-plan/bon-plan.component';
+import { BonpostComponent } from './bonpost/bonpost.component';
+import { SanteComponent } from './sante/sante.component';
 
 
 @NgModule({
@@ -51,6 +54,9 @@ import { PostComponent } from './post/post.component';
     FooterComponent,
     ActualitesComponent,
     PostComponent,
+    BonPlanComponent,
+    BonpostComponent,
+    SanteComponent,
   ],
   imports: [
     BrowserModule,

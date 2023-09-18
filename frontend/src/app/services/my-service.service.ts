@@ -54,4 +54,16 @@ export class MyService {
   actualites(actualites:any):Observable<any>{
     return this.http.get('http://localhost:4200/api/actualites')
   }
+
+  getPost(getPost:any):Observable<any>{
+    return this.http.get(`http://localhost:8085/api/actualites/:id`)
+  }
+
+  bonplan(actualites:any):Observable<any>{
+    return this.http.get('http://localhost:4200/api/bonplan')
+  }
+
+  getbonPost(getPost:any):Observable<any>{
+    return this.http.get(`http://localhost:8085/api/bonplan/:id`)
+  }
 }

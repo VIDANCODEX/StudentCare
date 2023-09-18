@@ -1,0 +1,43 @@
+<app-navbar></app-navbar>
+
+<div class="main-container container" style="margin-top: 50px;">
+    <div class="page-title">
+        <h1 class="tracking-in-expand">Les Bons Plans</h1>
+    </div>
+
+
+    <div id="container_bankpartners">
+        <div class="bank-card-container" *ngFor="let bonplan of bonplans">
+            <div class="bank-card">
+                <div class="img-card">
+                    <img [src]="bonplan.image_url" alt="Image du Bon Plan">
+                </div>
+                <div class="detail-card">
+                    <div class="title-more-card">
+							<h2>{{ bonplan.titre }}</h2>
+							<h2>{{ bonplan.categorie }}</h2>
+                    </div>
+                    <div class="line-card"></div>
+					<div class="description-card">
+						<div class="row-items-card">
+							<div class="item-card">
+								<ul role="list">
+									<li role="listitem" tabindex="0"><i class="fa fa-edit mr-1"></i>{{ bonplan.date_publication }}</li>
+									<li role="listitem" tabindex="0">{{ bonplan.description_c }}</li>
+								</ul>
+							</div>
+                            <button class="button" (click)="redirectToPost(bonplan.id_bon)">Voir Plus +</button>
+						</div>
+					</div>
+                </div>
+			</div>
+        </div>
+    </div>
+
+
+    <div *ngFor="let bonplan of bonplans">
+            
+    </div>
+</div>
+
+<app-footer></app-footer>

@@ -16,12 +16,16 @@ import {LoginComponent} from "./login/login.component";
 import { AcceuilComponent } from "./acceuil/acceuil.component";
 import { ActualitesComponent } from "./actualites/actualites.component";
 import { PostComponent } from './post/post.component';
+import { BonPlanComponent } from './bon-plan/bon-plan.component';
+import { BonpostComponent } from './bonpost/bonpost.component';
 
 
 const routes: Routes = [
-  { path: 'actualites', component: ActualitesComponent },
-  { path: 'actualites/:id', component: PostComponent }, // Add the route for detailed post
   { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'bon-plan', component: BonPlanComponent },
+  { path: 'bon-plan/:id', component: BonpostComponent },
+  { path: 'actualites', component: ActualitesComponent },
+  { path: 'actualites/:id', component: PostComponent },
   { path: 'login', component: LoginComponent },
   { path: 'acceuil/:id', component: AcceuilComponent },
   { path: 'admin/profil/:id', component: SingleProfilComponent },
@@ -29,14 +33,14 @@ const routes: Routes = [
   { path: 'admin', component: HeaderComponent},
   { path: 'user', component: UserHeaderComponent},
   { path: 'user/profil', component: UserHeaderComponent},
-  { path: 'user/:id/step1', component: UserStep1Component},
-  { path: 'user/:id/step2', component: UserStep2Component},
-  { path: 'user/:id/step3', component: UserStep3Component},
-  { path: 'user/:id/step4', component: UserStep4Component},
-  { path: 'user/:id/step5', component: UserStep5Component},
-  { path: 'user/:id/step6', component: UserStep6Component},
-  { path: 'user/:id/step7', component: UserStep7Component},
-  { path: 'user/:id/step8', component: UserStep8Component}
+  { path: 'user/step1/:id', component: UserStep1Component},
+  { path: 'user/step2/:id', component: UserStep2Component},
+  { path: 'user/step3/:id', component: UserStep3Component},
+  { path: 'user/step4/:id', component: UserStep4Component},
+  { path: 'user/step5/:id', component: UserStep5Component},
+  { path: 'user/step6/:id', component: UserStep6Component},
+  { path: 'user/step7/:id', component: UserStep7Component},
+  { path: 'user/step8/:id', component: UserStep8Component}
 ];
 
 @NgModule({

@@ -24,6 +24,9 @@ export class LoginComponent {
         console.log(response);
         if (response.success && response.userId) {
           const userId = response.userId;
+          const userStep = response.userStep;
+          localStorage.setItem('userId',userId);
+          localStorage.setItem('userStep',userStep);
           this.router.navigate([`/acceuil/${userId}`]);
         } else {
           console.log('Login failed or user ID not provided.');

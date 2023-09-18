@@ -243,7 +243,7 @@ server.put("/api/step/:id", (req, res) => {
 
 
 //////// Loggin 
-server.post('/api/login', (req, res, userId) => {
+server.post('/api/login', (req, res) => {
     const { email, password } = req.body;
     const query = 'SELECT id,step FROM informations WHERE email = ? AND password = ?';
   
@@ -256,7 +256,8 @@ server.post('/api/login', (req, res, userId) => {
   
       if (results.length === 1) {
         const userId = results[0].id;
-        res.json({ success: true, message: 'Login successful' , userId});
+        const userStep = results[0].step;
+        res.json({ success: true, message: 'Login successful' , userId, userStep});
       } else {
         res.json({ success: false, message: 'Invalid credentials' });
       }
@@ -278,11 +279,31 @@ server.post('/api/login', (req, res, userId) => {
   });
 
   server.get('/api/actualites/:id', (req, res) => {
-    const userId = parseInt(req.params.id);
-    db.query('SELECT titre, description, image_url, date_publication FROM actualities WHERE id = ?', [userId], (err, results) => {
+    const postId = parseInt(req.params.id);
+    db.query('SELECT titre, description_c,description_l, image_url, date_publication FROM actualities WHERE id_actu = ?', [postId], (err, results) => {
       if (err) {
         throw err;
       }
-      res.json(results[0]); // Assuming there is only one result for the provided ID
+      res.json(results[0]);
     });
   });
+
+    //bon plan
+    server.get('/api/bonplan', (req, res) => {
+        db.query('SELECT * FROM bonplan', (err, results) => {
+          if (err) {
+            throw err;
+          }
+          res.json(results);
+        });
+      });
+    
+      server.get('/api/bonplan/:id', (req, res) => {
+        const postId = parseInt(req.params.id);
+        db.query('SELECT * FROM bonplan WHERE id_bon = ?', [postId], (err, results) => {
+          if (err) {
+            throw err;
+          }
+          res.json(results[0]);
+        });
+      });
