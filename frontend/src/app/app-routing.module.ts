@@ -18,11 +18,13 @@ import { ActualitesComponent } from "./actualites/actualites.component";
 import { PostComponent } from './post/post.component';
 import { BonPlanComponent } from './bon-plan/bon-plan.component';
 import { BonpostComponent } from './bonpost/bonpost.component';
+import { SanteComponent } from './sante/sante.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'bon-plan', component: BonPlanComponent },
+  { path: 'sante', component: SanteComponent },
   { path: 'bon-plan/:id', component: BonpostComponent },
   { path: 'actualites', component: ActualitesComponent },
   { path: 'actualites/:id', component: PostComponent },
