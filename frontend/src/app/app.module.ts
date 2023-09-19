@@ -30,6 +30,10 @@ import { PostComponent } from './post/post.component';
 import { BonPlanComponent } from './bon-plan/bon-plan.component';
 import { BonpostComponent } from './bonpost/bonpost.component';
 import { SanteComponent } from './sante/sante.component';
+import { VisiteComponent } from './sante/visite/visite.component';
+import { MentaleComponent } from './sante/mentale/mentale.component';
+import { AssuranceComponent } from './sante/assurance/assurance.component';
+import { ProblemComponent } from './sante/problem/problem.component';
 
 
 @NgModule({
@@ -57,6 +61,10 @@ import { SanteComponent } from './sante/sante.component';
     BonPlanComponent,
     BonpostComponent,
     SanteComponent,
+    VisiteComponent,
+    MentaleComponent,
+    AssuranceComponent,
+    ProblemComponent,
   ],
   imports: [
     BrowserModule,

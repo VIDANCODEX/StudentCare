@@ -1,0 +1,20 @@
+.two-column-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+  }
+  
+  .right-column {
+    flex: 1; 
+    padding: 20px; 
+  }
+  
+  .left-column  {
+    flex: 1; 
+  }
+  
+  img {
+    max-width: 100%; 
+    height: auto; 
+  }
+  

@@ -19,11 +19,18 @@ import { PostComponent } from './post/post.component';
 import { BonPlanComponent } from './bon-plan/bon-plan.component';
 import { BonpostComponent } from './bonpost/bonpost.component';
 import { SanteComponent } from './sante/sante.component';
-
+import { VisiteComponent } from './sante/visite/visite.component';
+import { MentaleComponent } from './sante/mentale/mentale.component';
+import { AssuranceComponent } from './sante/assurance/assurance.component';
+import { ProblemComponent } from './sante/problem/problem.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'bon-plan', component: BonPlanComponent },
+  { path: 'sante/visite', component: VisiteComponent },
+  { path: 'sante/mentale', component: MentaleComponent },
+  { path: 'sante/assurance', component: AssuranceComponent },
+  { path: 'sante/problem', component: ProblemComponent },
   { path: 'sante', component: SanteComponent },
   { path: 'bon-plan/:id', component: BonpostComponent },
   { path: 'actualites', component: ActualitesComponent },
