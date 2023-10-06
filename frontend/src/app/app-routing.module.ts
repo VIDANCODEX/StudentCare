@@ -23,9 +23,13 @@ import { VisiteComponent } from './sante/visite/visite.component';
 import { MentaleComponent } from './sante/mentale/mentale.component';
 import { AssuranceComponent } from './sante/assurance/assurance.component';
 import { ProblemComponent } from './sante/problem/problem.component';
+import { AActualitesComponent } from './admin/a-actualites/a-actualites.component';
+import { ABonplanComponent } from './admin/a-bonplan/a-bonplan.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'admin/a-actualites', component: AActualitesComponent },
+  { path: 'admin/a-bonplan', component: ABonplanComponent },
   { path: 'bon-plan', component: BonPlanComponent },
   { path: 'sante/visite', component: VisiteComponent },
   { path: 'sante/mentale', component: MentaleComponent },

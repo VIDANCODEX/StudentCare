@@ -34,6 +34,8 @@ import { VisiteComponent } from './sante/visite/visite.component';
 import { MentaleComponent } from './sante/mentale/mentale.component';
 import { AssuranceComponent } from './sante/assurance/assurance.component';
 import { ProblemComponent } from './sante/problem/problem.component';
+import { AActualitesComponent } from './admin/a-actualites/a-actualites.component';
+import { ABonplanComponent } from './admin/a-bonplan/a-bonplan.component';
 
 
 @NgModule({
@@ -65,6 +67,8 @@ import { ProblemComponent } from './sante/problem/problem.component';
     MentaleComponent,
     AssuranceComponent,
     ProblemComponent,
+    AActualitesComponent,
+    ABonplanComponent,
   ],
   imports: [
     BrowserModule,

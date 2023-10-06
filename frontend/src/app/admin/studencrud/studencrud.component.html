@@ -1,7 +1,7 @@
-<app-header></app-header>
+<app-navbar></app-navbar>
 <div class="main-container container" style="margin-top: 50px;">
   <div class="page-title">
-    <h1 class="tracking-in-expand">Student Care</h1>
+    <h1 class="tracking-in-expand">Carte Séjour</h1>
   </div>
 
     <div id="messagesRegion" aria-label="form feedback" aria-live="assertive" aria-relevant="additions">
@@ -10,15 +10,9 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="sge-user-profile-info col-lg-3 col-md-12 text-center">
-
-
-          <h1 class="my-profile-section-h" style="width: 995px;">Carte Séjour</h1>
-
-
-          <div id="form:filter" class="ui-outputpanel ui-widget emp-filter mt-4" style="
-    width: 999px;
-">
+        <div class="sge-user-profile-info col-lg-3 col-md-12 text-center" > 
+          <h1 class="my-profile-section-h" style="width: 995px;"></h1>
+          <div id="form:filter" class="ui-outputpanel ui-widget emp-filter mt-4" style="width: 999px;">
             <div class="legend sge-theme-color"><i class="fas fa-filter mr-1"></i>Filtre</div>
             <form [formGroup]="filterForm" (ngSubmit)="applyFilters()">
             <table style="table-layout: fixed;">
@@ -27,7 +21,7 @@
               <td class="clmn-3">
 
                 <div id="form:periodGrid" class="ui-outputpanel ui-widget aria-role-presentation form-group" role="presentation">
-                  <div id="form:j_idt148" class="ui-outputpanel ui-widget form-control-placeholder" style="">
+                  <div id="form:j_idt148" class="ui-outputpanel ui-widget form-control-placeholder">
                 <label class=" ">Code</label>
                   </div>
 
@@ -39,7 +33,7 @@
               <td class="clmn-3">
 
                 <div id="form:periodGrid" class="ui-outputpanel ui-widget aria-role-presentation form-group" role="presentation">
-                  <div id="form:j_idt148" class="ui-outputpanel ui-widget form-control-placeholder" style="">
+                  <div id="form:j_idt148" class="ui-outputpanel ui-widget form-control-placeholder">
                     <label class=" ">Nationalite</label>
                   </div>
 
@@ -54,7 +48,7 @@
               <td class="clmn-3">
 
                 <div id="form:periodGrid" class="ui-outputpanel ui-widget aria-role-presentation form-group" role="presentation">
-                  <div id="form:j_idt148" class="ui-outputpanel ui-widget form-control-placeholder" style="">
+                  <div id="form:j_idt148" class="ui-outputpanel ui-widget form-control-placeholder">
                     <label class=" ">Statut</label>
                   </div>
 
@@ -143,4 +137,6 @@
         <div class="w-100"></div>
       </div>
 
-
+</div>
+</div>
+<app-footer></app-footer>
