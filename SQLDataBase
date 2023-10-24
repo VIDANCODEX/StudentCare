@@ -1,89 +1,116 @@
--- phpMyAdmin SQL Dump
--- version 5.2.1
--- https://www.phpmyadmin.net/
---
--- Hôte : 127.0.0.1
--- Généré le : jeu. 17 août 2023 à 17:05
--- Version du serveur : 10.4.28-MariaDB
--- Version de PHP : 8.2.4
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Base de données : `formulaire_1`
---
-
+-- --------------------------------------------------------
+-- Hôte:                         127.0.0.1
+-- Version du serveur:           8.0.31 - MySQL Community Server - GPL
+-- SE du serveur:                Win64
+-- HeidiSQL Version:             12.5.0.6677
 -- --------------------------------------------------------
 
---
--- Structure de la table `informations`
---
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-CREATE TABLE `informations` (
-  `id` int(11) NOT NULL,
-  `Nationalite` varchar(255) DEFAULT NULL,
-  `Nom` varchar(255) DEFAULT NULL,
-  `Prenom` varchar(255) DEFAULT NULL,
+
+-- Listage de la structure de la base pour formulaire_1
+CREATE DATABASE IF NOT EXISTS `formulaire_1` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `formulaire_1`;
+
+-- Listage de la structure de la table formulaire_1. actualities
+CREATE TABLE IF NOT EXISTS `actualities` (
+  `id_actu` int NOT NULL AUTO_INCREMENT,
+  `titre` varchar(255) NOT NULL,
+  `description_c` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
+  `description_l` text,
+  `image_url` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
+  `date_publication` datetime NOT NULL DEFAULT (now()),
+  PRIMARY KEY (`id_actu`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- Listage des données de la table formulaire_1.actualities : 6 rows
+/*!40000 ALTER TABLE `actualities` DISABLE KEYS */;
+INSERT INTO `actualities` (`id_actu`, `titre`, `description_c`, `description_l`, `image_url`, `date_publication`) VALUES
+	(1, 'CÉRÉMONIE DE REMISE DES DIPLÔMES', 'Cérémonie de remise des diplômes', 'La cérémonie de remise des diplômes est un moment mémorable dans la vie de tout étudiant. C\'est l\'aboutissement de plusieurs années d\'efforts, de sacrifices et de détermination. Cette journée spéciale est empreinte d\'émotions fortes, mêlant la fierté, le soulagement et l\'excitation. \r\n\r\nLa cérémonie elle-même est souvent empreinte de solennité et de tradition. Les étudiants revêtent leur toge académique, arborant avec fierté les symboles de leur réussite académique. Les familles et les amis sont présents pour témoigner de leur soutien et de leur amour, partageant la joie et l\'accomplissement des diplômés.\r\n\r\nLes discours des enseignants, des personnalités invitées et des diplômés eux-mêmes inspirent et motivent. Ils rappellent l\'importance de l\'éducation, de la persévérance et de l\'engagement dans la réalisation de ses rêves.\r\n\r\nLa remise des diplômes proprement dite est le point culminant de la cérémonie. Chaque diplômé monte sur scène pour recevoir son précieux parchemin, signe tangible de son dur labeur et de son succès. Les applaudissements chaleureux et les acclamations des proches créent un moment de joie indescriptible.\r\n\r\nEnfin, la cérémonie de remise des diplômes symbolise également le début d\'une nouvelle aventure. Les diplômés quittent l\'université pour entrer dans le monde professionnel, prêts à relever de nouveaux défis. C\'est un moment où le passé rencontre l\'avenir, et où l\'espoir et l\'excitation pour ce qui vient de l\'avant remplissent l\'air.\r\n\r\nEn somme, la cérémonie de remise des diplômes est bien plus qu\'un simple événement académique. C\'est une célébration de la réussite, de la détermination et de l\'engagement, marquant le passage à une nouvelle phase de la vie avec optimisme et confiance.', '../../assets/img1.jpeg', '2023-07-21 11:31:00'),
+	(2, 'BC DIPLÔMA', 'L’Université Centrale met à votre disposition la version numérique de votre diplôme basée sur la technologie Blockchain', 'L\'Université Centrale se distingue par son engagement à rester à la pointe de l\'innovation, et c\'est pourquoi nous sommes fiers de mettre à votre disposition la version numérique de votre diplôme, basée sur la technologie Blockchain. Cette avancée technologique révolutionnaire garantit la sécurité, l\'authenticité et la pérennité de votre précieux diplôme.', '../../assets/img2.jpeg', '2023-07-14 12:26:00'),
+	(3, 'LISTE DES SECTEURS JOB FAIR', 'Ne ratez pas le job fair de l\'université centrale, l\'IMSET et l\'AAC le 11 Mai 2023 à partir de 9h', 'Le 11 mai 2023, marquez cette date d\'une croix dans votre calendrier, car il s\'agit d\'une opportunité en or que vous ne voudrez certainement pas manquer ! L\'Université Centrale, en partenariat avec l\'IMSET (Institut Maghrébin des Sciences Économiques et de la Technologie) et l\'AAC (Association des Anciens de l\'Université Centrale), organise un Job Fair exceptionnel à partir de 9h. Cet événement promet d\'être une passerelle inestimable entre les étudiants et les opportunités professionnelles les plus passionnantes.', '../../assets/img3.jpeg', '2023-05-10 20:26:00'),
+	(4, 'JOB FAIR', 'Pour s’inscrire veuillez cliquer sur le lien suivant : https://bit.ly/41xR1cR', 'Pour ceux qui souhaitent s\'inscrire à cet événement exceptionnel, il vous suffit de cliquer sur le lien suivant : [Insérer le lien direct ici](https://bit.ly/41xR1cR). L\'inscription est simple et rapide, vous permettant ainsi d\'accéder à toutes les informations nécessaires pour préparer votre participation au Job Fair du 11 mai 2023. Ne manquez pas cette opportunité unique de vous connecter avec des employeurs de premier plan et d\'explorer un monde d\'opportunités professionnelles passionnantes. Cliquez dès maintenant et prenez le premier pas vers votre avenir professionnel brillant !', '../../assets/img4.jpeg', '2023-05-04 11:02:00'),
+	(5, 'SALLE DE SPORT GYM BOX', 'Salle de sport GYM BOX', 'La salle de sport Gym Box est bien plus qu\'un simple lieu dédié à l\'exercice physique, c\'est un véritable temple de la santé et du bien-être. Située au cœur de la ville, Gym Box offre un environnement dynamique et motivant pour les amateurs de fitness de tous niveaux. Dotée d\'équipements de pointe, de coachs professionnels et d\'une variété de cours et d\'activités, elle répond aux besoins et aux objectifs de chacun.', '../../assets/img5.jpeg', '2023-05-03 12:36:00'),
+	(6, 'AFRICAN WEEK', 'African week', NULL, '../../assets/img6.jpeg', '2023-04-27 15:41:00');
+/*!40000 ALTER TABLE `actualities` ENABLE KEYS */;
+
+-- Listage de la structure de la table formulaire_1. bonplan
+CREATE TABLE IF NOT EXISTS `bonplan` (
+  `id_bon` int NOT NULL AUTO_INCREMENT,
+  `titre` varchar(255) NOT NULL,
+  `categorie` varchar(255) NOT NULL,
+  `description_c` text,
+  `description_l` text,
+  `evaluation` enum('0','1','2','3','4','5') DEFAULT NULL,
+  `image_url` longtext,
+  `date_publication` datetime NOT NULL DEFAULT (now()),
+  PRIMARY KEY (`id_bon`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- Listage des données de la table formulaire_1.bonplan : 4 rows
+/*!40000 ALTER TABLE `bonplan` DISABLE KEYS */;
+INSERT INTO `bonplan` (`id_bon`, `titre`, `categorie`, `description_c`, `description_l`, `evaluation`, `image_url`, `date_publication`) VALUES
+	(1, 'Bolt', 'Transport', 'Bolt est la première super-appli européenne de mobilité. Nous luttons pour des villes pour l\'humain en offrant de meilleures alternatives à la voiture ', 'Bolt Transportation est une entreprise de réseau de transport qui offre des services de covoiturage dans plusieurs pays à travers le monde. Avec une plateforme conviviale et une application mobile intuitive, Bolt connecte rapidement les passagers avec des chauffeurs locaux, offrant ainsi une alternative pratique et abordable aux services de taxi traditionnels. Forte de sa popularité, particulièrement en Europe, Bolt se distingue par son engagement envers des tarifs équitables pour les passagers et des revenus compétitifs pour les chauffeurs. Leur flotte diversifiée comprend des véhicules standards, des voitures de luxe et même des scooters électriques, offrant ainsi une variété d\'options de transport pour répondre aux besoins de chacun. Bolt se démarque également par son engagement envers des pratiques de transport plus respectueuses de l\'environnement grâce à l\'intégration de véhicules électriques dans certaines de ses opérations. Avec son service fiable et sa présence croissante dans de nombreuses villes, Bolt Transportation continue de gagner en popularité en tant que choix préféré pour les déplacements urbains.', '4', 'https://bolt.eu/bolt-logo-original-on-white.png', '2023-09-17 18:30:26'),
+	(2, 'Glovo', 'Nourriture', 'À manger et bien plus près de vous (Tunisie). Faites vos courses en ligne ou commandez en livraison dans des établissements proches de vous. Essayez !', 'Glovo est une entreprise espagnole de livraison à la demande fondée en 2015 par Oscar Pierre et Sacha Michaud. Elle s\'est rapidement développée pour devenir l\'une des principales plateformes de livraison à domicile en Europe et en Amérique latine. Voici un aperçu des principales caractéristiques de Glovo :', '4', 'https://i.pinimg.com/originals/a8/71/4c/a8714cadb2358c6a32ce232025eb13fe.png', '2023-09-17 19:27:10'),
+	(3, 'Yassir', 'Transport, Nourriture', 'Pour vous déplacer au quotidien, pour gagner de l\'argent ou pour commander vos plats, YASSIR est l\'application qui répond à vos besoins.', 'Yassir est principalement axé sur les services de transport et de livraison à la demande, couvrant un large éventail de besoins de mobilité.', '3', 'data:image/png;base64,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', '2023-09-18 23:04:48'),
+	(4, 'Plan B', 'Restaurant', 'Une grande diversité de salades et de sandwiches est également mise à votre disposition chez PlanB ! Profitez de nos diverses formules.', 'Type de Cuisine : Le type de cuisine proposé par le restaurant "Plan B" peut varier en fonction de sa localisation et de son concept. Certains restaurants portant ce nom se spécialisent dans une cuisine spécifique, tandis que d\'autres offrent une variété de plats allant de la cuisine locale à la cuisine internationale.', '5', 'https://scontent.ftun15-1.fna.fbcdn.net/v/t39.30808-6/342988141_1295529051371243_743568684659197274_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=a2f6c7&_nc_ohc=lKCs-jwbWpUAX8kDUL0&_nc_ht=scontent.ftun15-1.fna&oh=00_AfBxJHbxT576vVDKHnLy9rcxUzwFOaOenZZFW8apmYp1mw&oe=650EA3E8', '2023-09-18 23:06:46');
+/*!40000 ALTER TABLE `bonplan` ENABLE KEYS */;
+
+-- Listage de la structure de la table formulaire_1. informations
+CREATE TABLE IF NOT EXISTS `informations` (
+  `id` int NOT NULL,
+  `Nationalite` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Nom` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Prenom` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `Arrivee` date DEFAULT NULL,
   `Delai` date DEFAULT NULL,
-  `Statut` varchar(255) DEFAULT NULL,
-  `Commentaire` varchar(255) DEFAULT '',
-  `telephone` varchar(50) DEFAULT NULL,
-  `email` varchar(100) DEFAULT NULL,
-  `adresse` varchar(255) DEFAULT NULL,
+  `Statut` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Commentaire` varchar(255) COLLATE utf8mb4_general_ci DEFAULT '',
+  `telephone` varchar(50) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `email` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `adresse` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `dateRappel` date DEFAULT NULL,
-  `step` varchar(255) DEFAULT NULL
+  `step` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `password` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'ucg*21770',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Déchargement des données de la table `informations`
---
+-- Listage des données de la table formulaire_1.informations : ~23 rows (environ)
+INSERT INTO `informations` (`id`, `Nationalite`, `Nom`, `Prenom`, `Arrivee`, `Delai`, `Statut`, `Commentaire`, `telephone`, `email`, `adresse`, `dateRappel`, `step`, `password`) VALUES
+	(149635, 'Ivoirien', 'Soko', 'Emmanuel', '2001-01-01', '2001-01-01', 'Incomplet', NULL, '51810463', 'e.soko0405@myu.universitecentrale.tn', '123, Avenue de la Gare', '2023-04-10', 'step1', 'ucg*21770'),
+	(179962, 'Tchadien', 'Barri', 'Ali', '2023-02-10', '2023-03-11', 'Incomplet', 'Test', '303645158', 'A.barri2203@myu.universitecentrale.tn', 'Tunis', NULL, 'step1', 'ucg*21770'),
+	(202123, 'Burkinabe', 'OUEDRAOGO', 'Kaled', '2029-02-07', '2014-07-23', 'Validé', 'azerty test', '0123456789', 'g.ouedraogo0209@myu.universitecentrale.tn', 'Carthage', '2023-08-19', 'step1', 'ucg*21770'),
+	(209962, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-07', '2023-03-01', 'Attente', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, 'step1', 'ucg*21770'),
+	(379962, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, 'step1', 'ucg*21770'),
+	(409962, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, 'step1', 'ucg*21770'),
+	(412062, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, 'step1', 'ucg*21770'),
+	(412162, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, 'step1', 'ucg*21770'),
+	(415562, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, 'step1', 'ucg*21770'),
+	(415762, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, 'step1', 'ucg*21770'),
+	(415862, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, 'step1', 'ucg*21770'),
+	(416662, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, 'step1', 'ucg*21770'),
+	(419962, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, 'step1', 'ucg*21770'),
+	(419977, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, 'step1', 'ucg*21770'),
+	(419987, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, 'step1', 'ucg*21770'),
+	(429962, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, 'step1', 'ucg*21770'),
+	(431962, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, 'step1', 'ucg*21770'),
+	(432962, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, 'step1', 'ucg*21770'),
+	(436462, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, 'step1', 'ucg*21770'),
+	(679962, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, 'step1', 'ucg*21770'),
+	(697452, 'Camerounais', 'Sekou', 'Ousmane', '2023-04-11', '2023-01-05', 'Attente', '', '58715463', 'o.sekou0811@myu.universitecentrale.tn', 'Cite El Khadra', NULL, 'step1', 'ucg*21770'),
+	(789641, 'Malien', 'Kone', 'Aziz', '2023-07-26', '2023-09-20', 'Validé', '', '51895463', 'a.kone0409@myu.universitecentrale.tn', '123, Avenue de la Gare', NULL, 'step1', 'ucg*21770'),
+	(879961, 'Nigerien', 'Konate', 'Aziz', '2022-02-10', '2022-03-11', 'Attente', 'Test', '203645177', 'a.konate1009@myu.universitecentrale.tn', 'Tunis', NULL, 'step1', 'ucg*21770');
 
-INSERT INTO `informations` (`id`, `Nationalite`, `Nom`, `Prenom`, `Arrivee`, `Delai`, `Statut`, `Commentaire`, `telephone`, `email`, `adresse`, `dateRappel`, `step`) VALUES
-(149635, 'Ivoirien', 'Soko', 'Emmanuel', '2024-02-18', '2023-11-29', 'Incomplet', '', '51810463', 'e.soko0405@myu.universitecentrale.tn', '123, Avenue de la Gare', '2023-08-01', NULL),
-(179962, 'Tchadien', 'Barri', 'Ali', '2023-02-10', '2023-03-11', 'Incomplet', 'Test', '303645158', 'A.barri2203@myu.universitecentrale.tn', 'Tunis', NULL, NULL),
-(202123, 'Burkinabe', 'OUEDRAOGO', 'Kaled', '2029-02-07', '2014-07-23', 'Attente', 'azerty test', '0123456789', 'g.ouedraogo0209@myu.universitecentrale.tn', 'Carthage', '2023-08-19', NULL),
-(209962, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-07', '2023-03-01', 'Attente', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, NULL),
-(379962, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, NULL),
-(409962, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, NULL),
-(412062, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, NULL),
-(412162, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, NULL),
-(415562, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, NULL),
-(415762, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, NULL),
-(415862, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, NULL),
-(416662, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, NULL),
-(419962, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, NULL),
-(419977, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, NULL),
-(419987, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, NULL),
-(429962, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, NULL),
-(431962, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, NULL),
-(432962, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, NULL),
-(436462, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, NULL),
-(679962, 'Senegalais', 'NomTest', 'PrenomTest', '2023-02-10', '2023-03-11', 'En Cours', 'Test', '303645158', 't.test0101@myu.universitecentrale.tn', 'Barcelone', NULL, NULL),
-(697452, 'Camerounais', 'Sekou', 'Ousmane', '2023-04-11', '2023-01-05', 'Attente', '', '58715463', 'o.sekou0811@myu.universitecentrale.tn', 'Cite El Khadra', NULL, NULL),
-(789641, 'Malien', 'Kone', 'Aziz', '2023-07-26', '2023-09-20', 'Validé', '', '51895463', 'a.kone0409@myu.universitecentrale.tn', '123, Avenue de la Gare', NULL, NULL),
-(879961, 'Nigerien', 'Konate', 'Aziz', '2022-02-10', '2022-03-11', 'Attente', 'Test', '203645177', 'a.konate1009@myu.universitecentrale.tn', 'Tunis', NULL, NULL);
-
---
--- Index pour les tables déchargées
---
-
---
--- Index pour la table `informations`
---
-ALTER TABLE `informations`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id` (`id`);
-COMMIT;
-
+/*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;
