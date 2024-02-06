@@ -52,8 +52,8 @@ server.post("/api/student/add", (req,res) =>{
         }
     });
 });
-//Methode GET
 
+//Methode GET
 server.get("/api/student",(req,res)=>{
     var sql = "SELECT * from informations";
     db.query(sql,function (error,result){
